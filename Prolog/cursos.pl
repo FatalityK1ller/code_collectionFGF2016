@@ -1,0 +1,25 @@
+estuda(ana, computacao).
+estuda(joao, computacao).
+estuda(pedro, computacao).
+estuda(maria, computacao).
+estuda(beatriz, computacao).
+estuda(miguel, computacao).
+estuda(luiza, computacao).
+estuda(lucas, direito).
+estuda(luiz, direito).
+estuda(mariana, direito).
+estuda(jose, direito).
+estuda(eduardo, direito).
+nasceu(ana, fortaleza).
+nasceu(joao, fortaleza).
+nasceu(pedro, caucaia).
+nasceu(maria, sobral).
+nasceu(beatriz, caninde).
+nasceu(miguel, moradanova).
+nasceu(luiza, crateus).
+nasceu(lucas, sobral).
+nasceu(luiz, sobral).
+nasceu(mariana, fortaleza).
+nasceu(jose, caucaia).
+nasceu(eduardo, fortaleza).
+
