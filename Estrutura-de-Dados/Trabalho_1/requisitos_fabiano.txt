@@ -1,0 +1,7 @@
+Requisitos para um Cabelo
+
+1º- Possui ?
+2º- Compimento
+3º- Cor
+4º- Tipo(Crespo, enrolado, etc.)
+5º- Alterado quimicamente
