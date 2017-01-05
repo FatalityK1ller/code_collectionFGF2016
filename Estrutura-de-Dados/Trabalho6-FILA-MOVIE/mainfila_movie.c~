@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include "fila_movie.h"
+#define TAM 3
+#define strucTAM 30
+void main(){
+
+	Filme f,*a=&f;
+	inicia(f);
+	insere(f,20);	
+	insere(f,30);
+	insere(f,40);
+	imprime(f);
+	retira(f);
+	retira(f);
+	imprime(f);
+	insere(f,50);
+	imprime(f);
+	
+
+}
