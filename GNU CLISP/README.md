@@ -1,58 +1,59 @@
-# GNU CLISP - an ANSI Common Lisp Implementation
 
-![](https://clisp.sourceforge.io/clisp.png)
+<h1 align="center">GNU CLISP - an ANSI Common Lisp Implementation</h1>
+<p align="center">
+<img src="https://clisp.sourceforge.io/clisp.png">
+</p>
+
 
 - [What is CLISP?](https://clisp.sourceforge.io/summary.html)
 
-	a feature-loaded implementation of a great language!
+a feature-loaded implementation of a great language!
 
 - [The benefits of Common Lisp and CLISP](https://clisp.sourceforge.io/propaganda.html)
 
-	why is ANSI Common Lisp such a great programming environment?
+why is ANSI Common Lisp such a great programming environment?
 
 - [CLISP manual page for UN*X](https://clisp.sourceforge.io/impnotes/clisp.html)
 
-	command line options for other platforms are very similar (see clisp.html in your build directory or binary distribution)
+command line options for other platforms are very similar (see clisp.html in your build directory or binary distribution)
 
 - [CLISP Implementation Notes](https://clisp.sourceforge.io/impnotes.html) [[TOC]](https://clisp.sourceforge.io/impnotes/)
 
-	How CLISP implements and extends the ANSI standard INCITS 226-1994 (R1999) "Information Technology - Programming Language - Common Lisp", available as the Common Lisp HyperSpec.
+How CLISP implements and extends the ANSI standard INCITS 226-1994 (R1999) "Information Technology - Programming Language - Common Lisp", available as the Common Lisp HyperSpec.
 
 - [CLISP as a login shell](https://clisp.sourceforge.io/clash.html)
 
-	You can use CLISP instead of bash / zsh / tcsh!
+You can use CLISP instead of bash / zsh / tcsh!
 
 - [Common Lisp on the Web](https://clisp.sourceforge.io/resources.html)
 
-	information and software
+information and software
 
 - [CLISP FAQ list](https://clisp.sourceforge.io/impnotes/faq.html)
 
-	Frequently Asked Questions about CLISP, with answers, including
+Frequently Asked Questions about CLISP, with answers, including
 
-		- [How do I ask for help?](https://clisp.sourceforge.io/impnotes/faq.html#faq-help)
-		- [How do I report bugs?](https://clisp.sourceforge.io/impnotes/faq.html#faq-help)
+    - [How do I ask for help?](https://clisp.sourceforge.io/impnotes/faq.html#faq-help)
+    - [How do I report bugs?](https://clisp.sourceforge.io/impnotes/faq.html#faq-help)
+	- [SourceForge Project Home](https://sourceforge.net/projects/clisp)
+	- [bug reports](https://sourceforge.net/p/clisp/bugs/)
+	- [developers](https://sourceforge.net/p/clisp/_members/)
+	- [help wanted](https://clisp.sourceforge.io/wanted.html)
+	- [RFEs](https://sourceforge.net/p/clisp/feature-requests/)
+	- [donate](https://sourceforge.net/p/clisp/donate/?source=homepage)
 
-- [SourceForge Project Home](https://sourceforge.net/projects/clisp)
+* [CLISP](http://clisp.org/) elsewhere
 
-		- [bug reports](https://sourceforge.net/p/clisp/bugs/)
-		- [developers](https://sourceforge.net/p/clisp/_members/)
-		- [help wanted](https://clisp.sourceforge.io/wanted.html)
-		- [RFEs](https://sourceforge.net/p/clisp/feature-requests/)
-		- [donate](https://sourceforge.net/p/clisp/donate/?source=homepage)
-
-- [CLISP](http://clisp.org/) elsewhere
-
-		- [GNU](http://www.gnu.org/) [Free Software Directory](http://directory.fsf.org/) - [CLISP](http://directory.fsf.org/project/clisp/) and [Lisp](http://www-2.cs.cmu.edu/afs/cs/project/ai-repository/ai/lang/lisp/0.html)
-		- [CMU Artificial Intelligence Repository](http://www-2.cs.cmu.edu/afs/cs.cmu.edu/project/ai-repository/ai/0.html) (very old but still valuable) - [CLISP](http://www-2.cs.cmu.edu/afs/cs/project/ai-repository/ai/lang/lisp/impl/clisp/0.html) and [Lisp](http://www-2.cs.cmu.edu/afs/cs/project/ai-repository/ai/lang/lisp/0.html)
-		- [Launchpad](https://launchpad.net/clisp)
-		- [OpenHub](https://www.openhub.net/projects/clisp)
-		- [Help translate CLISP messages into your language!](http://translationproject.org/domain/clisp.html)
+	* [GNU](http://www.gnu.org/) [Free Software Directory](http://directory.fsf.org/) - [CLISP](http://directory.fsf.org/project/clisp/) and [Lisp](http://www-2.cs.cmu.edu/afs/cs/project/ai-repository/ai/lang/lisp/0.html)
+	* [CMU Artificial Intelligence Repository](http://www-2.cs.cmu.edu/afs/cs.cmu.edu/project/ai-repository/ai/0.html) (very old but still valuable) - [CLISP](http://www-2.cs.cmu.edu/afs/cs/project/ai-repository/ai/lang/lisp/impl/clisp/0.html) and [Lisp](http://www-2.cs.cmu.edu/afs/cs/project/ai-repository/ai/lang/lisp/0.html)
+	* [Launchpad](https://launchpad.net/clisp)
+	* [OpenHub](https://www.openhub.net/projects/clisp)
+	* [Help translate CLISP messages into your language!](http://translationproject.org/domain/clisp.html)
 
 - How are you using CLISP?
 
-	- [Tell us your story!](clisp-list@lists.sourceforge.net)
-	- [Review CLISP on OpenHub!](https://www.openhub.net/p/clisp/reviews/new)
+	* [Tell us your story!](clisp-list@lists.sourceforge.net)
+	* [Review CLISP on OpenHub!](https://www.openhub.net/p/clisp/reviews/new)
 
 ---
 
