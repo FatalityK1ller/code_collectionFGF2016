@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang='pt'>
+<head>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"6bf0d4e021","applicationID":"8619102","transactionName":"cFgLTBAJClkERBlHAEBEDFcMFUlbBEE=","queueTime":1,"applicationTime":71,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<title>Biblioteca Virtual</title>
+<link href="/assets/bv3/users-3c2ad9e5fc812d78077691220902cfb6.css" media="screen, projection" rel="stylesheet" type="text/css" />
+<link href="/assets/print-875f0d42a52ff5536404da8fda8d423b.css" media="print" rel="stylesheet" type="text/css" />
+<script src="/assets/modernizr-b6b519f1f983ad8b6815fefc1b10b994.js" type="text/javascript"></script>
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="GHry8RbfZ3Xpglb4adeBN1nU8y1dWrH9gDz0oJZIH9M=" name="csrf-token" />
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24369443-2']);
+  _gaq.push(['_trackPageview']);
+  
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<script src="/assets/users-9848b305ad8556851151d1646f2fd3ca.js" type="text/javascript"></script>
+</head>
+<body class='bv3 sessions user fgf flashed' role='application'>
+
+<section>
+<aside role='complementary'></aside>
+<div id='content' role='main'>
+<ul>
+<li class='contact'><a href="/users/account/contact" remotable="true">Contato</a></li>
+</ul>
+<div id='sign_in'>
+<header>
+<p><img alt="Bv3" src="/assets/logos/bv3-60ebc5f6de8302919855ffc049160df1.png" /></p>
+<p><img alt="Logo" src="https://bv-content.s3.amazonaws.com/uploads/university/logo/39/logo.png" /></p>
+</header>
+<div class='content'>
+<h2>Preencha os campos abaixo para acessar o acervo</h2>
+<form accept-charset="UTF-8" action="/users/sign_in" class="formtastic user" id="new_user" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="GHry8RbfZ3Xpglb4adeBN1nU8y1dWrH9gDz0oJZIH9M=" /></div><fieldset class="inputs"><ol><li class="string input required stringish" id="user_login_input"><label class=" label" for="user_login">Login<abbr title="required">*</abbr></label><input id="user_login" maxlength="255" name="user[login]" placeholder="Login" type="text" />
+
+</li>
+<li class="password input optional stringish" id="user_password_input"><label class=" label" for="user_password">Senha</label><input id="user_password" name="user[password]" placeholder="Senha" type="password" />
+
+</li>
+</ol></fieldset><fieldset class="actions"><ol><li class="fleft boolean input optional" id="user_remember_me_input"><input name="user[remember_me]" type="hidden" value="0" /><label class="" for="user_remember_me"><input id="user_remember_me" name="user[remember_me]" type="checkbox" value="1" />Manter-me conectado</label>
+
+</li>
+<li class="action input_action fright" id="user_submit_action"><input name="commit" type="submit" value="Acessar" /></li>
+</ol></fieldset></form>
+
+</div>
+<footer>
+<div><a href="/users/password/new">Esqueceu sua senha?</a></div>
+</footer>
+</div>
+<style>
+  nav.platform .institution.logo { display: none }
+</style>
+
+<div class='alert alert-success' id='notification'></div>
+</div>
+</section>
+<footer role='contentinfo'><img alt="Bv3" src="/assets/footers/bv3-97a7ff5f8dadb7efc507d794255b3127.png" /></footer>
+
+<div class='fade hide modal publications'>
+<div class='modal-header'>
+<a class='close' data-dismiss='modal' type='button'>
+Fechar
+</a>
+<h3>Lista de publicações</h3>
+</div>
+<div class='modal-body'><div class='table paginated'>
+<table class='table table-bordered'>
+<thead>
+<th>Editora</th>
+<th>ISBN</th>
+<th>Título</th>
+<th>Autor</th>
+</thead>
+<tbody></tbody>
+</table>
+<div class='pagination'></div>
+</div>
+<footer>
+<p class='pull-left'>
+Livros disponíveis:
+<span></span>
+</p>
+<a href="https://bv-content.s3.amazonaws.com/etc/bv3/d67d8ab4f4c10bf22aa353e27879133c-rdplibrary-bv3-fgf_publications.xlsx">Exportar Lista</a>
+</footer>
+</div>
+</div>
+<script>
+  if (!Modernizr.input.placeholder) rdplibrary.fixPlaceHolders();
+</script>
+
+
+
+<!--[if lt IE 10]>
+<script src="/assets/ie-5f2dd022c97a6b0384b8176794c4497c.js" type="text/javascript"></script>
+<![endif]-->
+</body>
+</html>

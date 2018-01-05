@@ -1,0 +1,11 @@
+5 teclado 50
+2 mouse 20
+12 monitor 500
+7 cpu 950
+10 pendrive_16 35
+10 pendrive_32 55
+9 notebook 1750
+35 hd 350
+45 memoria 120
+78 tablet 900
+

@@ -1,0 +1,121 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "ponto.h"
+
+void criaponto(Ponto *p,float valorX, float valorY){
+	p->x=valorX;
+	p->y=valorY;
+}
+
+void vervalores(Ponto *a){
+
+	if(a==NULL)	{
+		printf("Ponto não existe\n");
+		return;}
+	printf("valor de x é %f: \n",a->x);
+	printf("valor de y é %f: \n",a->y);
+}
+
+void doispontos(Ponto *p,Ponto *c,float valorX1, float valorY1, float valorX2, float valorY2){
+	p->x1=valorX1;
+	p->y1=valorY1;
+	c->x2=valorX2;
+	c->y2=valorY2;
+}
+
+void vervalores2(Ponto *a, Ponto *b){
+	if(a==NULL && b==NULL)	{
+		printf("Ponto não existe\n");
+		return;}
+	printf("valor de x1 é %f: \n",a->x1);
+	printf("valor de y1 é %f: \n",a->y1);
+	printf("valor de x2 é %f: \n",b->x2);
+	printf("valor de y2 é %f: \n",b->y2);
+
+
+}
+
+
+void quadrante(Ponto *a, Ponto *b,float valorX1, float valorY1, float valorX2, float valorY2){
+
+	a->x1=valorX1;
+	a->y1=valorY1;
+	b->x2=valorX2;
+	b->y2=valorY2;	
+
+	if(a==NULL && b==NULL)	{
+		printf("Ponto não existe\n");
+		return;}	
+	if(a->x1 > 0 && a->y1 > 0){
+		printf("QUADRANDTE 1\n");
+
+	}
+	if(a->x1 < 0 && a->y1 > 0){
+		printf("QUANDRANTE 2\n");
+	}
+	if(a->x1 < 0 && a->y1 < 0){
+		printf("QUANDRANTE 3\n");
+	}
+	if(a->x1 > 0 && a->y1 < 0){
+		printf("QUANDRANTE 4\n");
+	}
+	if(b->x2 > 0 && b->y2 > 0){
+		printf("QUADRANDTE 1\n");
+	}
+	if(b->x2 < 0 && b->y2 > 0){
+		printf("QUANDRANTE 2\n");
+	}
+	if(b->x2 < 0 && b->y2 < 0){
+		printf("QUANDRANTE 3\n");
+	}
+	if(b->x2 > 0 && b->y2 < 0){
+		printf("QUANDRANTE 4\n");
+	}
+	 
+	
+}
+
+
+void trocaX(Ponto *a, float valorX){
+	a->x=valorX;
+}
+
+void trocaY(Ponto *a, float valorY){
+	a->y=valorY;
+}
+
+void soma(Ponto *a,Ponto *b,float valorX1, float valorY1, float valorX2, float valorY2){
+	a->x=valorX1+valorY1;
+	b->y=valorX1+valorY2;
+}
+
+void versoma(Ponto *a,Ponto *b){
+
+	if(a==NULL && b==NULL)	{
+		printf("Ponto não existe\n");
+		return;}
+	printf("soma de PONTO 1 é %f: \n",a->x);
+	printf("soma de PONTO 2 é %f: \n",b->y);
+}
+
+void subtracao(Ponto *a,Ponto *b,float valorX1, float valorY1, float valorX2, float valorY2){
+	a->x=valorX1-valorY1;
+	b->y=valorX1-valorY2;
+}
+
+void versub(Ponto *a,Ponto *b){
+
+	if(a==NULL && b==NULL)	{
+		printf("Ponto não existe\n");
+		return;}
+	printf("subtracao de PONTO 1 é %f: \n",a->x);
+	printf("subtracao de PONTO 2 é %f: \n",b->y);
+}
+
+Ponto * exclui(Ponto *a){
+
+	a=NULL;
+return a;
+}
+
+
