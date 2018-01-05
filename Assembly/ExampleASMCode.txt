@@ -1,0 +1,177 @@
+ECE 331 Example ASM Code
+
+;Simple AND example (A.Mason Feb 10)
+;Function: AND value in accA with value in program memory and store to memory
+;Address mode for each instruction shown in comments
+;version1: no labels
+           ORG    $4000
+           LDAA     #$0F        ;immediate
+           ANDA     #$F0        ;immediate
+           STAA     $5550       ;extended
+           SWI
+           END
+
+
+;Simple AND example (A.Mason Feb 10)
+;Function: AND value in accA with value in memory and store to memory
+;Address mode for each instruction shown in comments
+;version2: uses labels and equates, different values than version1
+           ORG    $4000
+Num1       EQU    $AA
+Num2       EQU    $55
+Result     EQU    $5550          
+           LDAA     #Num1        ;immediate
+           ANDA     #Num2        ;immediate
+           STAA     Result       ;extended
+           SWI
+           END
+
+
+;Simple AND example (A.Mason Feb 10)
+;Function: AND value in accA with value in memory and store to memory
+;Address mode for each instruction shown in comments
+;version3: uses data storage and gets operands from memory
+           ORG    $4000
+           LDAA     Num1        ;extended
+           ANDA     Num2        ;extended
+           STAA     Result       ;extended
+           SWI      ;stop
+;data storage
+           ORG    $5550
+Num1       FCB    $FA
+Num2       FCB    $5F
+Result     FCB    $00   ;initialize result byte [5552] to 00
+           END
+
+;Simple AND example (A.Mason Feb 10)
+;Function: AND value in accA with value in memory and store to memory
+;Address mode for each instruction shown in comments
+;version4: uses index address mode to store result
+           ORG    $4000
+           LDX    #Result       ;load addr of result in IX
+           LDAA     Num1        ;extended
+           ANDA     Num1+1      ;extended
+           STAA     0,X         ;indexed
+           SWI      ;stop
+;data storage
+      ORG    $5550
+Num1       FCB    $AF
+Num2       FCB    $FA
+Result     FCB    $00   ; initialize result byte [5552] to 00
+           END
+
+
+;ECE331 Simple Summation (A.Mason Feb 10)
+;add series of numbers beginning at 'nums'
+;number of values added set by value in 'count'
+;values must be small to avoid overflow; 'count' must be < 10
+;requires indexed addressing; to simplify code, numbers added in reverse order
+	org	$4000
+	ldab	count     ;# of numbers to add
+        decb              ;# of additions is 1 less than # of numbers
+        ldx     #nums     ;addr for nums
+        ldaa    sum       ;load starting sum
+again   adda    b,x
+        decb              ;decrement counter
+        bpl     again     ;if b >= zero, add another
+        staa    sum    
+	swi
+	org	$6000
+count	fcb     $03
+nums	fcb	1,2,3,4,5,6,7,8,9,10
+sum	fcb	$F0     ;previous sum -random value
+	end
+
+
+; ECE331 Example of SET/CLR Bit and Branch Instructions
+; program will read data and set lower nibble to %0011
+; until odd value is read
+        ORG     $4000
+	LDAA	#00	; initialize index offset byte
+	LDX	#DATA	; initialize index reference register
+TOP	BRSET   A,X,$01,ODD	;end if odd value
+	BSET	A,X,%00000011
+	BCLR	A,X,%00001100
+	LDAB	A,X
+	INCA
+	BRA	TOP
+ODD	SWI		;end
+; data storage
+	ORG	$6000
+DATA	FCB	$EE, $DC, $D0, $F4
+	FCB	$80, $00, $55, $22
+	FCB	$AA
+	END
+
+; ECE331 Example of Branches
+; program will copy a list of data at HERE to THERE
+; number of bytes to copy set by BYTES
+HERE    EQU     $2000
+THERE   EQU     $2020
+BYTES   EQU     $06
+        ORG     $1000
+        LDAB	#$00 	;initialize item counter
+	LDX	#HERE 	;initialize index reg as memory pointers
+        LDY	#THERE
+LOOP    LDAA    0,X  ;using indexed addressing
+        STAA    0,Y
+        INCB            ;increment counter
+        CMPB    #BYTES  ;check for end of list
+	BEQ 	DONE 	;if we are done
+        INX             ;increment index registers
+        INY
+	BRA	LOOP	;continue at top
+DONE    SWI             ;use SWI for any program that stops running
+        END
+; data storage
+       ORG    HERE
+       FCB    $10,$11,$12,$13,$14,$15,$16
+       ORG    THERE
+       RMB    BYTES    ;reserve locations to copy data
+
+
+;Code to illustrate difference between program and data memory
+;and describe difference between instruction, directives, and opcodes
+;FUNCTION: Copy data from D_REC to D_CPY. Counts number of data bytes
+;  in each record (record ends with 01) & stores count in RESULTS. Supports
+;  up to 10 records and up to 32 data bytes
+;
+;***begin data block definition
+	ORG	$6000; define data records
+D_REC	FCB	$AA,$BB,$CC,$FF,$EE,$01
+	FCB	$A1,$B2,$C3,$F4,$01
+	FCB	$81,$72,$63,$54,$45,$E5,$01
+RESULT	RMB	$0A; reserve 10 addrs. for results
+D_CPY	RMB	$10; reserve 32 addrs. for copy
+;
+;***begin main program
+	ORG	$4000
+	LDS	#$8000
+	LDX	#D_REC
+	LDY	#D_CPY
+	LDAA	#$0
+	PSHA	;initialize # records
+LOOP	LDAB	0,X
+	STAB	0,Y
+	CMPB	#$01
+	BEQ	ENDLP
+	INX
+	INY
+	INCA
+	BRA	LOOP
+ENDLP	PULB
+	PSHY
+	LDY	#RESULT
+	STAA	B,Y
+	PULY	; restore Y
+	INCB
+	PSHB	; store updated # records
+	CPX	#RESULT
+	BEQ	DONE	; at end of records?
+	INX
+	INY
+	CLRA
+	BRA	LOOP
+;end of program
+DONE	TBA; copy # records to accA
+	END
