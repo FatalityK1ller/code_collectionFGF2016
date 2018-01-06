@@ -29,8 +29,7 @@ t","September","October","November","December"};
   scanf("%4u",&y);
   if(y<0)
 		 y=-y;
-  cprintf("
-Enter the month: ");
+  cprintf("Enter the month: ");
   scanf("%2u",&m);
   if(m<=0 || m>=13)
 		 m=1;
@@ -55,18 +54,10 @@ Enter the month: ");
 		 m1++;
   }
   d=t%7;
-  printf("
+  printf("Year: '%u'",y);
+  printf("Month: '%s'",a[m-1]);
 
-                     Year: '%u'",y);
-  printf("
-                    Month: '%s'
-
-",a[m-1]);
-
-printf("%6s%6s%6s%6s%6s%6s%6s
-
-","Sun","Mon","Tue","Wed","Thu","Fri","Sa
-t");
+printf("%6s%6s%6s%6s%6s%6s%6s","Sun","Mon","Tue","Wed","Thu","Fri","Sat");
   textcolor(GREEN);
   k=1;
   for(i=1;i<=day(m,y);i++,k++)
