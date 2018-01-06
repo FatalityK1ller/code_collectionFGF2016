@@ -1,4 +1,4 @@
-GetTheCurrentTime
+
 
 package com.ack.j2se.date;
 
