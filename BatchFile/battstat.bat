@@ -1,3 +1,5 @@
+:: Display battery status
+
 @ECHO OFF
 :: Check for Windows NT 4 or later (though XP or later is required)
 IF NOT "%OS%"=="Windows_NT" GOTO Syntax
