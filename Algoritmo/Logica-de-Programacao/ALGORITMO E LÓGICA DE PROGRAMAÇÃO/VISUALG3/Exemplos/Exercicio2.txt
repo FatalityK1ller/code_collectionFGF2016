@@ -1,0 +1,60 @@
+algoritmo "Exercicio2"
+// Função :
+// Autor :
+// Data : 26/05/2015
+var
+// Seção de Declarações
+   xTotal,Multa : Real
+   xDIFER,Kilos : inteiro
+         xTecla : Caracter
+           xflag: Logico
+inicio
+// Seção de Comandos 
+xflag := Verdadeiro
+Enquanto xflag faca
+     LimpaTela
+     Escreval("Quantos kilos de Peixe o sr Jose pescou?")
+     Escreval(" ")
+     Escreval(" ")
+     Escreva("  Kilos : ")
+     Leia(kilos)
+     Escreval(" ")
+
+     xDifer := 0
+     xTotal := 0.00
+     SE Kilos > 50 ENTAO
+        xDIFER := Kilos - 50
+        Escreval(" ")
+        Escreval("A quantidade pescada ultrapassou 50Kg em ",xDifer,"Kg ")
+        Escreval(" ")
+        Multa := 4.00
+        Escreval("Sendo que a Multa por kilo é : ",Multa,",00 (reais)")
+        Escreval(" ")
+        xTotal:= Multa * xDifer
+     FIMSE
+
+     Escreval(" ")
+     Escreval("================================================")
+     Escreval(" ")
+
+     SE xTotal > 0 ENTAO
+        Escreval("O sr. Jose irá pagar R$ ",xTotal,",00 (Reias)")
+     SENAO
+        Escreval("O sr. Jose não precisará pagar nada !")
+     FIMSE
+
+     Escreval(" ")
+     Escreval(" ")
+     Escreval(" ")
+
+     Escreva("Deseja continuar <S/N> ? ")
+     Leia(xTecla)
+
+     SE (xTECLA = "N") ou (xTECLA = "n") entao
+        xflag := Falso
+     SENAO
+        xflag := Verdadeiro
+     FIMSE
+
+FIMENQUANTO
+fimalgoritmo

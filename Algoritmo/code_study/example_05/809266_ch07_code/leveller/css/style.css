@@ -1,0 +1,16 @@
+body {
+	font-family: Arial, sans;
+	background: green;
+}
+#info {
+	background: #ebebeb;
+}
+#info p {
+	text-align: center;
+	padding: 4px 10px;
+}
+#success-message {
+	display: none;
+	color: green;
+	font-weight: bold;
+}

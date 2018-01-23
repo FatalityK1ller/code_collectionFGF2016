@@ -1,0 +1,1233 @@
+
+exercício1
+algoritmo "1+10 até 101"
+var
+n:inteiro
+inicio
+// Seção de Comandos
+  n<-1
+  enquanto n<101 faca
+      n<-n+10
+      escreval(n)
+  fimenquanto
+fimalgoritmo
+
+
+exercício2
+algoritmo "Colocar 2 n° ordem"
+// Função :
+// Autor :
+// Data : 14/4/2008
+// Seção de Declarações
+var
+a,b,c : numerico
+inicio
+// Seção de Comandos
+  Escreva "Digite a  " 
+  Leia a
+  Escreva "Digite b  " 
+  Leia b
+  se a>b entao
+       escreva b,a
+  senao
+       escreva a,b
+  fimse
+fimalgoritmo
+
+
+exercício3
+algoritmo "Celcius para fahrenheit"
+var
+Tc,Tf:real
+inicio
+// Seção de Comandos
+  escreval("Entre com a temperatura em °C.")
+  Leia (Tc)
+  TF<-(9*Tc+160)/5
+  escreval(Tc,"°C Celcius equivale a ",Tf,"°F")
+fimalgoritmo
+
+
+exercício4
+lgoritmo "Colocar 3 números em ordem"
+var
+a,b,c : numerico
+m,n,o :numerico
+inicio
+// Seção de Comandos
+escreval ("Este programa organiza qualquer 3 números em ordem crescente")
+escreval("Entre com os valores separados por ENTER")
+Leia (a,b,c)
+se a>b entao
+     se b>c entao
+          m<-c
+          n<-b
+          o<-a
+      senao
+          m<-b
+          se a>c entao
+               n<-c
+               o<-a
+          senao
+               n<-a
+               o<-c
+          fimse
+      fimse
+senao
+   se b<c entao
+        m<-a
+        n<-b
+        o<-c
+   senao
+       o<-b
+       se a>c entao
+            m<-c
+            n<-a
+       senao
+            m<-a
+            n<-c
+       fimse
+   fimse
+fimse
+escreval(m,n,o)
+fimalgoritmo
+
+
+exercício5
+algoritmo "semnome"
+// Função :
+// Autor :
+// Data : 19/4/2008
+// Seção de Declarações 
+var
+a,b,c,n:inteiro
+inicio
+// Seção de Comandos
+//O Valor de B Vira o de C e o A vira o de B
+//Pede-se o 10° termo após a soma de A+B=C depois da alteração
+a<- 0
+B<- 1
+n<- 0
+enquanto n < 10 faca
+   c<- (a+b)
+   a<-b
+   b<-c
+   n<-(n+1)
+   escreval(c)
+   fimenquanto
+escreval("Eis os números")
+fimalgoritmo
+
+
+exercício6
+algoritmo "Altura do prédio"
+var
+Hh,Sh,Hp,Sp:real
+inicio
+// Seção de Comandos
+escreval("Entre com o comprimento da sombra do prédio.")
+Leia(Sp)
+escreval("Entre com o comprimento da sua sombra.")
+Leia (Sh)
+escreval("Qual a sua altura")
+Leia (Hh)
+Hp<-(Sp*Hh)/Sh
+escreval("A altura do prédio é",Hp)
+fimalgoritmo
+
+
+exercício7
+algoritmo "semnome"
+// Função :
+// Autor :
+// Data : 21/4/2008
+// Seção de Declarações
+//Uma Empresa decidiu fazer um levantamento dos candidatos que se inscreveram
+//para preenchimento de vaga no seu quadro de funcionários, utilizando
+//processamento eletrônico e você foi contratado. Escreva um algoritmo que
+//leia, via teclado, um conjunto de informações para cada candidato, contendo:
+//• número de inscrição do candidato,
+//• idade,
+//• sexo,
+//• experiência anterior(S-sim/N-nao)
+//Calcule:
+//•    Quantidade de candidatos?
+//•    Quantidade de candidatas?
+//•    Média de idade dos homens com experiência?
+//•    Percentagem dos homens com mais de 45 anos?
+//•    Quantidade de mulheres com idade inferior a 35 anos e com experiência?
+//•    Menor idade entre as mulheres que já tem experiência no serviço?
+var
+Numeroidentificacao,I,n,Homens,Mu_menor35,nh45,he,Si:inteiro
+Sx,p,o:caractere
+Porc_Hmaior45,media,menor:real
+inicio
+// Seção de Comandos
+O<-"s"
+menor<-9999999999
+enquanto O="s" faca
+   escreval("*********************************************************************")
+   escreval("Informações sobre o candidato.")
+   escreval("*********************************************************************")
+   escreval()
+   escreval()
+   n<-n+1
+   escreval("Informe o número da matrícula do candidato")
+   leia (Numeroidentificacao)
+   escreval("Informe o sexo do candidato (m-masculino; f-feminino)")
+   leia (sx)
+   escreval("Informe a idade do candidato")
+   Leia (I)
+   escreval("Primeiro emprego? (s-sim; n-não)")
+   Leia (p)
+   escreval("Inscrever outro candidato. (s-sim; n-não)")
+   leia (o)
+   se sx="m" entao
+      Homens<-Homens+1
+      se (p="n") entao
+         He<-He+1
+         Si<-Si+I
+         media<-Si/He
+      fimse
+      se I>45 entao
+         nh45<-nh45+1
+         Porc_Hmaior45<-(nh45/Homens)*100
+      fimse
+   fimse
+   se (Sx="f") e (p="n") entao
+      se I<menor entao
+         menor<-I
+      fimse
+      se I<35 entao
+         Mu_menor35<-Mu_menor35+1
+      fimse
+   fimse
+   limpatela
+fimenquanto
+escreval("Resultados")
+Escreval ("número de candidatos",n)
+escreval("O número de candidatos é ",Homens)
+escreval("O número de candidatas é ",N-Homens)
+escreval("Média de idade dos homens com esperiência ",media)
+escreval("Porcentagem dos homens maiores que 45 anos ",Porc_Hmaior45)
+escreval("mulheres com experiência com idade inferior a 35 anos ",Mu_menor35)
+escreval("Mulher mais nova com experiência",menor)
+fimalgoritmo
+
+
+
+exercício8
+algoritmo "Confirmação de Senha"
+// Função :
+// Autor :
+// Data : 19/4/2008
+// Seção de Declarações
+var
+Senha_padrao,Senha :caracter
+inicio
+// Seção de Comandos
+escreval("Digite a senha padrão")
+Leia (senha_padrao)
+escreval ("Digite a senha correta")
+leia (senha)
+   se (senha=Senha_padrao) entao
+      Escreval ("Senha correta. Sua senha é  ",senha)
+   senao
+      escreva ("senha invalida")
+   fimse
+fimalgoritmo
+
+
+
+exercício9
+algoritmo "Média de Gasolina"
+// Função :
+// Autor :
+// Data : 19/4/2008
+// Seção de Declarações
+var
+N1,N2,s:inteiro
+G1,G2,Gs,Gc:real
+//Realizarei uma viagem de vários dias em meu automóvel, e gostaria de saber a
+//quilometragem média por litro de gasolina. Para isto, anotarei a quilometragem
+//no velocímetro ao sair de viagem, e depois ao chegar; também vou somar toda a
+//gasolina que comprar para o carro. Você poderia fazer um programa que me desse,
+//com estes dados, quantos km fiz, em média, por litro de gasolina?
+//escreval("Digite o valor inicial no )
+inicio
+//seção de comandos
+escreval("Digite o Número registrado no marcador de quilometragem com 5 dígitos.")
+Leia (N1)
+escreval()
+escreval("Digite a quantidade inicial de litros de gasolina no tanque.")
+Leia (G1)
+escreval()
+escreval("Quanto de Gasolina você adicionou ao veículo?")
+Leia (G2)
+escreval()
+escreval("Digite o número registrado no marcador de quilometragem")
+escreval("depois da viagem com 5 dígitos.")
+Leia (N2)
+escreval()
+se n2<n1 entao
+   S<-(99999-n1)+n2
+senao
+   S<-N2-N1
+fimse
+escreval("Digite quanto sobrou de gasolina.")
+Leia (Gs)
+Gc<-G1+G2-Gs
+escreval()
+escreval()
+escreval("Você percorreu",S," Km")
+escreval("Você consumiu",Gc," litros")
+Escreval("Sua média de consumo é de ",((S)/(Gc)):6:2," Km/l")
+fimalgoritmo
+=========================================================
+Outra versão
+=========================================================
+algoritmo "Viagem"
+// Função : media gastos
+// Autor : michelbranco@msn.com
+// Data : 21/02/2014
+// Seção de Declarações
+var
+A1,A2,A3,A4,A5,A6:inteiro
+inicio
+// Seção de Comandos
+escreval("km da inicio da viagem")
+leia(A1)
+escreval("quanto litros de combustivel inicio da viagem")
+leia(A2)
+escreval("valor pago do combustivel inicio viagem")
+leia(A3)
+escreval("km da volta da viagem")
+leia(A4)
+escreval("quanto litros de combustivel volta da viagem")
+leia(A5)
+escreval("valor pago do combustivel volta viagem")
+leia(A6)
+A1<-(A4-A1)
+A2<-(A5+A2)
+A3<-(A6+A3)
+limpatela
+escreval("viagem foi de: ",A1," kilometros percorridos")
+escreval("foi gasto:", A2," litros combustivel")
+escreval("valor gasto:",A3," dinheiro")
+escreval("o veiculo fez",((A1+A1)/A2)," km por litros combustiveeis")
+fimalgoritmo
+
+
+
+exercício10
+algoritmo "CPMF"
+var
+CPMF,V:real
+inicio
+// Seção de Comandos
+escreval("Digite o valor do cheque.")
+Leia (V)
+CPMF<-V*0.0038
+escreval("CPMF nesse cheque é de R$",CPMF)
+fimalgoritmo
+
+
+
+exercício11
+algoritmo "semnome"
+// Função :
+// Autor :
+// Data : 16/5/2008
+// Seção de Declarações 
+var
+d,anos,meses:inteiro
+inicio
+// Seção de Comandos
+escreval("ENTRE com o número de dias sem acidentes.")
+leia(d)
+anos<-d\360
+meses<-(d%360)\30
+d<-((d%360)%30)
+escreval("se passaram ",anos," anos",meses," meses e",d," dias sem acidentes.")
+fimalgoritmo
+
+exercício12
+algoritmo "Multiplo de 7"
+var
+n:inteiro
+inicio
+// Seção de Comandos
+escreval("Digite um número.")
+leia (N)
+se N%7=0 entao
+escreval(N," É divisível por 7.")
+senao
+escreval(N," não é divisível por 7.")
+fimse
+fimalgoritmo
+
+exercício13
+algoritmo "Número de divisore e quais são"
+// Função :
+// Autor :
+// Data : 30/4/2008
+// Seção de Declarações 
+var
+n,a,divisor,b:inteiro
+inicio
+// Seção de Comandos
+escreval("Digite um número")
+Leia (a)
+//Calculo de divisores
+enquanto n<>a faca
+n<-n+1
+Divisor<-a%n
+se divisor=0 entao
+escreval(n)
+b<-b+1
+fimse
+fimenquanto
+escreval()
+escreval(a," tem ",b," divisores")
+fimalgoritmo
+
+exercício14
+algoritmo "semnome"
+// Função :
+// Autor :
+// Data : 19/4/2008
+// Seção de Declarações
+var
+n,a1,q,an,p:real
+inicio
+// Seção de Comandos
+escreva("Digite o número de termos.  ")
+Leia (n)
+escreva("Digite o primeiro termo.  ")
+Leia (a1)
+Escreva ("Digite a razão. ")
+Leia (q)
+an<-q^(n-1)
+an<-a1*an
+P<- (a1*an)^(n/2)
+Escreval ("O Produto dos termos é igual a ",P)
+escreval ("ultimo termo",an)
+fimalgoritmo
+
+exercício15
+algoritmo "Potencia na marra"
+// Função :
+// Autor :
+// Data : 25/4/2008
+// Seção de Declarações 
+var
+n,poten,a,x:inteiro
+inicio
+// Seção de Comandos
+escreval("insira um valor.")
+leia(a)
+escreval("Este valor vai ser elevado a potencia de")
+leia(x)
+poten<-1
+n<-x
+se x=0 entao
+poten<-1
+fimse
+se x>0 entao
+enquanto n>=1 faca
+n<-n-1
+poten<-poten*a
+fimenquanto
+fimse
+se x<0 entao
+n<-n*(-1)
+enquanto n>=1 faca
+n<-n-1
+poten<-poten*a
+fimenquanto
+poten<-1/poten
+fimse
+escreval(a, " elevado a ",x," =",poten)
+fimalgoritmo
+
+exercício16
+algoritmo "Entre 18 e 65 anos"
+var
+N:inteiro
+inicio
+// Seção de Comandos
+escreval("Digite um número.")
+leia (N)
+se N>=18 entao
+   se N<=65 entao
+      escreval("É maior que 18 e menor que 65 anos.")
+   senao
+      escreval("É maior que 65 anos.")
+   fimse
+senao
+   escreval("É menor que 18 anos.")
+fimse
+fimalgoritmo
+
+exercício17
+algoritmo "Raizes da reta"
+var
+x,a,b:real
+inicio
+// Seção de Comandos
+escreval("Digite os coeficientes da equação y=ax+b seguidos de ENTER.")
+Leia(a,b)
+X<-((-1)*b)/a
+escreval("A reta toca o eixo x no ponto (",X," ,"," 0 )")
+fimalgoritmo
+
+exercício18
+algoritmo "semnome"
+// Função :
+// Autor :
+// Data : 17/4/2008
+// Seção de Declarações
+var
+P :caractere
+inicio
+// Seção de Comandos
+Escreval ("Escolha o que você quer comprar.")
+escreval ("")
+escreval ("Blusa - B")
+escreval ("Calça - C")
+escreval ("Meia - M")
+escreval ("")
+escreva ("Digite a letra correspondente ao que você deseja. - ")
+Leia (P)
+se (p = "b") ou (p="c") ou (p="m") entao
+   se p= "b" entao
+      escreval ("Obrigado por comprar a Blusa")
+   fimse
+   se p= "m" entao
+      escreval ("Obrigado por comprar a Meia")
+   fimse
+   se p= "c" entao
+      escreval ("Obrigado por comprar a Calça")
+   fimse
+senao
+   escreval ("Alternativa inválida.")
+fimse
+fimalgoritmo
+
+exercício19
+algoritmo "fatorial"
+var
+n,a,fat:inteiro
+inicio
+fat<-1
+escreval("Fatorial de quanto.")
+leia (n)
+para a de 1 ate n faca
+Fat<-Fat*a
+fimpara
+escreval("Fatorial de",n," é:",fat)
+fimalgoritmo
+
+
+exercício20
+algoritmo "Fatorial crescente"
+// Função :
+// Autor :
+// Data : 29/4/2008
+// Seção de Declarações 
+var
+a,n,fatorial:inteiro
+inicio
+// Seção de Comandos 
+escreval("Digite o número que você quer a fatorial.")
+Leia (a)
+fatorial<-1
+enquanto n<>a faca
+n<-n+1
+fatorial<-fatorial*n
+fimenquanto
+escreval(fatorial)
+fimalgoritmo
+
+
+exercício21
+algoritmo "Fatorial"
+// Função :
+// Autor :
+// Data : 23/4/2008
+// Seção de Declarações 
+var
+fatorial,n1:inteiro
+inicio
+// Seção de Comandos
+escreval("Digite um valor.")
+Leia (n1)
+fatorial<-n1
+enquanto (n1>0) e (n1<>1) faca
+fatorial<-fatorial*(n1-1)
+n1<-(n1-1)
+fimenquanto
+escreval ("N fatorial é ",fatorial)
+fimalgoritmo
+
+
+exercício22
+algoritmo "Dias de vida"
+var
+D,M,A:inteiro
+nome:caractere
+Dn,An,Mn:inteiro
+Dano,Danon,Av,Dv:inteiro
+inicio
+// Seção de Comandos
+//Dados de entrada
+escreval ("Digite seu nome.")
+Leia (nome)
+escreval ("Digite o dia, o mes e o ano de HOJE em dígitos separados por ENTER.")
+Leia (D,M,A)
+escreval ("Digite o dia, o mes e o ano em dígitos de seu NASCIMENTO separados por ENTER.")
+Leia (Dn,Mn,An)
+limpatela
+//Condições existência
+se (An>A) entao
+   escreval("Você não pode viver antes de nascer!!!")
+senao
+   se (An=A) e (Mn>m)entao
+      escreval("Você não pode viver antes de nascer!!!")
+   senao
+      se (An=A) e (Mn=M) e (dn>d) entao
+         escreval("Você não pode viver antes de nascer!!!")
+      fimse
+   fimse
+fimse
+//aniversário
+//se (D=Dn) E (M=Mn) entao
+//   escreval("Parabés é seu aniversário.")
+//   escreval("Você já viveu",(A-An)*365," dias")
+//senao
+//fimse
+//Calculo dos anos de vida Av
+se mn<m entao
+   Av<-(A-An)
+senao
+   Av<-(A-An-1)
+fimse
+se mn=m entao
+   se Dn<D entao
+      Av<-(A-An)
+   senao
+      Av<-(A-An-1)
+   fimse
+fimse
+//Calculo do dias no ano correspondente.
+//*************************************
+escolha m
+caso 1
+   Dano<-d
+caso 2
+   Dano<-31+d
+caso 3
+   Dano<-59+d
+caso 4
+   Dano<-90+d
+caso 5
+   Dano<-120+d
+caso 6
+   Dano<-151+d
+caso 7
+   Dano<-181+d
+caso 8
+   Dano<-212+d
+caso 9
+   Dano<-243+d
+caso 10
+   Dano<-273+d
+caso 11
+   Dano<-304+d
+caso 12
+   Dano<-334+d
+fimescolha
+// calculo do dia do nascimeto até hoje
+//*************************************
+escolha mn
+caso 1
+   Danon<-dn
+caso 2
+   Danon<-31+dn
+caso 3
+   Danon<-59+dn
+caso 4
+   Danon<-90+dn
+caso 5
+   Danon<-120+dn
+caso 6
+   Danon<-151+dn
+caso 7
+   Danon<-181+dn
+caso 8
+   Danon<-212+dn
+caso 9
+   Danon<-243+dn
+caso 10
+   Danon<-273+dn
+caso 11
+   Danon<-304+dn
+caso 12
+   Danon<-334+dn
+fimescolha
+//Cálculo dos dias de vida Dv.
+se Dano<Danon entao
+   Dv<-Av*365+Dano
+   Dv<-Dv+365-Danon
+senao
+   DV<-((Av*365)+(Dano-Danon))
+fimse
+//Dados de Saída
+escreval("Parabéns ",nome)
+escreval("Você já viveu",Dv)
+fimalgoritmo
+
+
+exercício23
+algoritmo "1° Questão"
+var
+km,t,vm:real
+inicio
+// Seção de Comandos
+escreval("Entre com a distância percorrida")
+Leia (km)
+escreval("Entre com o tempo em horas diferente de ZERO")
+Leia (t)
+vm<-km/t
+se vm>110 entao
+   escreval("Você superou o limite de velocidade")
+senao
+   escreval("Sua velocidade média foi inferior ao limite de velocidade")
+fimse
+escreval("Limite:110")
+escreval("Velocidade média:",Vm)
+fimalgoritmo
+
+
+exercício24
+algoritmo "Saldo final"
+var
+Si,Sf,C,D:real
+inicio
+// Seção de Comandos
+escreval("Entre com o saldo inicial.")
+leia(Si)
+escreval("Entre com o total de créditos.")
+leia(c)
+escreva("Entre com o total de débitos.")
+Leia(d)
+Sf<-Si+c-d
+escreval("O seu saldo final é R$",Sf)
+fimalgoritmo
+
+
+exercício25
+algoritmo "Eleições"
+var
+n1,n2,n3,vencedor:caracter
+V1,V2,V3,votos:inteiro
+inicio
+// Seção de Comandos
+escreval("Entre com o nome dos candidato 1 seguido pela quantidade de votos.")
+Leia(N1,V1)
+escreval("Entre com o nome dos candidato 2 seguido pela quantidade de votos.")
+Leia(N2,V2)
+escreval("Entre com o nome dos candidato 3 seguido pela quantidade de votos.")
+Leia(N3,V3)
+vencedor<-N1
+votos<-V1
+se v2>v1 entao
+   vencedor<-N2
+   votos<-v2
+fimse
+se V3>vencedor entao
+   vencedor<-N3
+   votos<-v3
+fimse
+escreval("O vencedor foi",vencedor," com",votos," votos")
+fimalgoritmo
+
+
+exercício26
+algoritmo "maior e menor"
+var
+T1,T2,T3 : numerico
+menor,maior :numerico
+inicio
+// Seção de Comandos
+escreval("Entre com os valores das temperaturas separados por ENTER")
+Leia (T1,T2,T3)
+se T1>T2 entao
+   se T2>T3 entao
+      menor<-T3
+      maior<-T1
+   senao
+      menor<-T2
+      se T1>T3 entao
+         maior<-T1
+      senao
+         n<-T1
+         maior<-T3
+      fimse
+   fimse
+senao
+   se T2<T3 entao
+      menor<-T1
+      maior<-T3
+   senao
+      maior<-T2
+      se T1>T3 entao
+         menor<-T3
+      senao
+         menor<-T1
+      fimse
+   fimse
+fimse
+escreval("A menor foi de",menor," e a maior de",maior)
+fimalgoritmo
+
+
+exercício27
+algoritmo "Equação do segundo grau"
+// Função :
+// Autor :David Clifte
+// Data : 21/4/2008
+// Seção de Declarações
+var
+x1,x2,a,b,c,delta: real
+inicio
+// Seção de Comandos
+Escreval ("Escreva os coeficientes da equação.")
+escreval("Coeficiente de x².")
+Leia (a)
+escreval("Coeficiente de x.")
+Leia (B)
+escreval("Termo independente.")
+Leia (c)
+delta<-(b*b-(4*a*c))
+se delta<0 entao
+   escreval ("As raízes não são reais")
+senao
+   x1<-(-b+delta^(1/2))/2*a
+   x2<-(-b-delta^(1/2))/2*a
+   escreval("As raízes são ",x1," e ",x2)
+fimse
+fimalgoritmo
+
+
+exercício28
+algoritmo "Triangulos"
+var
+a,b,c:real
+inicio
+// Seção de Comandos
+escreval("Digite o tamanho dos lados seguidos de ENTER.")
+Leia(a,b,c)
+se (a<(b+c)) e (b<(a+c)) e (c<(a+b)) entao
+   se a<>b entao
+      se b<>c entao
+         escreval("Este é um triângulo escaleno.")
+      senao
+         escreval("Este é um triângulo isósceles.")
+      fimse
+   senao
+      se a<>c entao
+         escreval("Este é um triângulo isósceles.")
+      senao
+         escreval("Este é um triângulo equilátero.")
+      fimse
+   fimse
+senao
+   escreval("Esses lados não configuram um triângulo.")
+fimse
+fimalgoritmo
+==================================================
+segunda versão
+==================================================
+Este algoritmo contém um erro: se informarmos, por exemplo, as medidas 2, 3 e 2, nesta ordem, ele retorna a informação de que o triângulo é escaleno, quando, na verdade, é isósceles. Uma solução possível seria:
+algoritmo "Triangulo"
+var
+a, b, c: real
+inicio
+escreva ("Digite a medida do primeiro lado: ")
+leia (a)
+escreva ("Digite a medida do segundo lado: ")
+leia (b)
+escreva ("Digite a medida do terceiro lado: ")
+leia (c)
+se (a >= (b + c)) ou (b >= (a + c)) ou (c >= (a + b)) entao
+escreva ("Estas medidas não formam um triângulo")
+senao
+se a = b entao
+se b = c entao
+escreva ("Estas medidas formam um triângulo EQUILÁTERO")
+senao
+escreva ("Estas medidas formam um triângulo ISÓSCELES")
+fimse
+senao
+se b = c entao
+escreva ("Estas medidas formam um triângulo ISÓSCELES")
+senao
+se c = a entao
+escreva ("Estas medidas formam um triângulo ISÓSCELES")
+senao
+escreva ("Estas medidas formam um triângulo ESCALENO")
+fimse
+fimse
+fimse
+fimse
+fimalgoritmo
+==================================================
+terceira versão
+==================================================
+O ISÓSCELES figura 3 vezes no algoritmo, porque há 3 possibilidades do usuário 
+informar as medidas que levem a um 
+isósceles: a=2, b=2, e c=3; a=2, b=3, e c=2; e a=3, b=2, e c=2.
+
+exercício29
+algoritmo "categoria"
+var
+p,h:real
+inicio
+// Seção de Comandos
+escreval("informe o peso(kg) e a altura(cm) do atleta seguidos por ENTER.")
+leia(P,H)
+se (P>=50) e (p<60) e (h<170) entao
+   escreval("Novato")
+senao
+   se (P>=60) e (P<=80) e (h>=170) e (h<190) entao
+      escreval("Profissional")
+   senao
+      escreval("Amador")
+   fimse
+fimse
+fimalgoritmo
+
+
+exercício30
+algoritmo "semnome"
+var
+Si,T,B:real
+inicio
+// Seção de Comandos
+escreval("Entre com o salário do funcionário e o tempo na empresa.")
+Leia(Si,T)
+B<-Si
+se T>=3 entao
+   B<-Si*1.1
+fimse
+se Si<=400 entao
+   B<-B*1.15
+senao
+se si<=1000 entao
+      B<-B*1.12
+   senao
+      B<-B*1.05
+   fimse
+fimse
+escreval("O novo salário é de",B)
+fimalgoritmo
+
+
+exercício31
+algoritmo "Quadrante"
+var
+x,y:real
+inicio
+// Seção de Comandos
+escreval("Entre com os valores das coordenadas (X,Y) seguidos de ENTER.")
+Leia(x,y)
+se (x<>0) e (y<>0) entao
+   se x>0 entao
+      se y>0 entao
+         escreval("O ponto pertence ao primeiro quadrante.")
+      senao
+         escreval("O ponto pertence ao quarto quadrante.")
+      fimse
+   senao
+      se y>0 entao
+         escreval("O ponto pertence ao segundo quadrante.")
+      senao
+         escreval("O ponto pertence ao terceiro quadrante.")
+      fimse
+   fimse
+fimse
+se y=0 entao
+   escreval("O ponto pertence ao eixo das abscissas.")
+fimse
+se x=0 entao
+   escreval("O ponto pertence às ordenadas.")
+fimse
+fimalgoritmo
+
+
+exercício32
+algoritmo "carambolas e amoras"
+var
+Tcm,T_a,T_c,a,c:real
+inicio
+// Seção de Comandos
+escreval("Entre com a quantidade em quilos de carambolas compradas.")
+Leia(C)
+escreval("Entre com a quantidade em quilos de amoras compradas.")
+Leia(a)
+se c>10 entao
+   t_c<-c*4.5
+senao
+   t_c<-c*5
+fimse
+se a>10 entao
+   t_a<-a*2
+senao
+   t_a<-a*3
+fimse
+Tcm<-T_a + T_c
+se (Tcm>35) ou (a+c>15) entao
+   Tcm<-Tcm*0.8
+senao
+   Tcm<-T_a + T_c
+fimse
+escreval("O total a ser pago é",Tcm)
+fimalgoritmo
+
+
+exercício33
+algoritmo "IMC"
+var
+M,H,IMC:real
+inicio
+// Seção de Comandos
+escreva("Qual a sua massa?")
+Leia (m)
+escreva("Qual a sua altura?")
+Leia (h)
+IMC<-m/(h*h)
+se IMC<18.5 entao
+   escreva ("Abaixo do peso.")
+senao
+   se IMC<25 entao
+      escreva ("Peso normal.")
+   senao
+      se IMC<30 entao
+         escreva ("Sobre peso.")
+      senao
+         se IMC<35 entao
+            escreva ("Obeso leve.")
+         senao
+            se IMC<40 entao
+               escreva ("Obeso moderado.")
+            senao
+               se IMC>=40 entao
+                  escreva("Obeso mórbito.")
+               fimse
+            fimse
+         fimse
+      fimse
+   fimse
+fimse
+fimalgoritmo
+
+
+exercício34
+algoritmo "ano bissexto"
+var
+n:inteiro
+inicio
+// Seção de Comandos
+se n%4=0 entao
+escreval("É ano bissexto.")
+senao
+escreval("não é amo bissexto.")
+fimalgoritmo
+====================================
+segunda versão
+====================================
+Na verdade, a coisa não é assim tão simples. Para se determinar se ano é bissexto, além da divisibilidade por 4, deve-se observar outras duas regras: se o ano for divisível por 100, não será bissexto, a menos que seja divisível por 400. Essas regras valem para os anos a partir de 1582, quando o Papa Gregório implementou essa mudança, para corrigir a diferença entre o tempo de rotação da Terra em torno de Sol, que é de 365 dias, 5 horas, 48 minutos e 46 segundos. Assim, ao se acrescentar 6 horas a cada 4 anos, haverá uma discrepância entre a realidade e o calendário gregoriano. Para corrigir isso, a cada 100 anos o ano deixa de ser bissexto, a menos que seja múltiplo de 400.
+O algoritmo abaixo determina com melhor precisão os anos bissextos. Embora as regras atuais valham somente a partir de 1582, esse algoritmo não está considerando o marco.
+
+algoritmo "AnoBissexto"
+var
+ano: inteiro
+inicio
+escreva ("Digite o ano: ")
+leia (ano)
+se ano % 400 = 0 entao
+      escreva ("O ano", ano, " é bissexto")
+senao
+      se (ano % 4 = 0) entao
+           se ano % 100 = 0 entao
+                escreva ("O ano", ano, " não é bissexto")
+           senao
+                escreva ("O ano", ano, " é bissexto")
+            fimse
+      senao
+            escreva ("O ano", ano, " não é bissexto")
+      fimse
+fimse
+fimalgoritmo
+
+
+
+exercício35
+algoritmo "nome,aprovado,media"
+var
+nome:caracter
+a,b,c,d,media:real
+inicio
+// Seção de Comandos
+escreval("Entre com o nome do aluno.")
+leia(nome)
+escreval("Entre com as 4 notas seguidas de ENTER.")
+Leia(a,b,c,d)
+media<-(a+b+c+d)/4
+se media>=6 entao
+escreval(nome," Foi aprovado.")
+senao
+escreval(nome," Foi reprovado.")
+fimse
+fimalgoritmo
+
+
+exercício36
+lgoritmo "Preenchimento de formulário"
+// Função :
+// Autor :
+// Data : 13/4/2008
+// Seção de Declarações 
+var
+    NOME, ENDERECO, CEP, N, CIDADE, PAIS :CARACTER
+    IDADE, ANO_DE_NASCIMENTO, ANO :INTEIRO
+inicio
+// Seção de Comandos
+Escreva "*******************************************"
+Escreva "**************Mini Formulário**************"
+Escreva "*******************************************"
+Escreva ""
+Escreva ""
+Escreva "Em que ano estamos?  "
+Leia Ano
+Escreva "Escreva seu nome:  "
+Leia Nome
+Escreva "Endereço:  "
+Leia Endereco
+Escreva "N°: "
+Leia N
+Escreva "CEP:  "
+Leia CEP
+Escreva "Cidade:  "
+Leia CIDADE
+Escreva "País:  "
+Leia PAIS
+Escreva "Ano de seu nascimento:  "
+Leia ano_de_nascimento
+IDADE <- ANO-Ano_de_nascimento
+Escreva ""
+Escreva "********************************************************"
+Escreva "Formulário - Ano ",ANO
+Escreva "********************************************************"
+Escreva ""
+Escreva "",nome,"  Idade:",idade," Anos"
+Escreva "Ano de nascimento  ",ano_de_nascimento
+Escreva ""
+Escreva "Cidade: ",cidade, "  CEP: ",cep,"  Endereço: ",endereco,
+Escreva "Número: ",n,"  País: ",PAIS
+Escreva ""
+Escreva ""
+fimalgoritmo
+
+
+exercício37
+algoritmo "Mes correspondente"
+var
+a,b:inteiro
+inicio
+escreval("Dgite dois valore seguidos por ENTER.")
+Leia (a,b)
+se (a%2=0) entao
+   se (b%2=0) entao
+      escreval("Os dois são pares.")
+   senao
+      escreval("O primeiro é par e o segundo é impar.")
+   fimse
+senao
+   se (b%2=0) entao
+      escreval("O primeiro é impar e o segundo é par.")
+   senao
+      escreval("Os dois são Impares")
+   fimse
+fimse
+fimalgoritmo
+
+
+exercício38
+algoritmo "Tabuada de um número"
+var
+n,a:inteiro
+inicio
+escreval("Entre com um número.")
+Leia (n)
+enquanto n<>-1 faca
+   para a de 0 ate 10 faca
+      escreval(n," x",a,"=",n*a)
+   fimpara
+   escreval("Entre com outro número.(-1 encerra).")
+   Leia (n)
+fimenquanto
+fimalgoritmo
+
+
+exercício39
+algoritmo "interrompa"
+// Função : Demonstrar o uso dos comandos interrompa e fimrepita
+// Autor :
+// Data : 04/01/2004
+// Seção de Declarações
+var
+x,r,t : inteiro
+inicio
+x <- 0
+escreval ("Entre com o valor da Razão")
+Leia (R)
+escreval ("Entre com o número de termos")
+Leia (t)
+escreval ("Entre com o primeiro termo")
+Leia (x)
+escreval ("")
+escreval ("Estes são os Termos")
+repita
+   x <- x + r
+   t<- t-1
+   escreval(x)
+   se t = 0 entao
+      interrompa // não estruturado, mas usado por alguns autores...
+   fimse
+   fimrepita
+   // O trecho acima é o mesmo que:
+fimalgoritmo
+
+
+
+exercício40
+algoritmo "Soma dos números pares"
+// Função :
+// Autor :
+// Data : 20/4/2008
+// Seção de Declarações 
+var
+X,n:inteiro
+inicio
+// Seção de Comandos
+escreval("Soma dos números pares menores que 100")
+x<-0
+n<-0
+enquanto n*2<98 faca
+n<-n+1
+x<-x+(n*2)
+fimenquanto
+escreval("A Soma é:",X)
+ fimalgoritmo

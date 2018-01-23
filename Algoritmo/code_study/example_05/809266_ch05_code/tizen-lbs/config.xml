@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="http://yourdomain/tizenlbs" version="1.0.0" viewmodes="maximized">
+    <tizen:application id="7ONj1tlKCc.tizenlbs" package="7ONj1tlKCc" required_version="2.1"/>
+    <content src="index.html"/>
+    <icon src="icon.png"/>
+    <name>tizenlbs</name>
+    <access origin="http://gstatic.com" subdomains="true"/>
+    <access origin="http://googleapis.com" subdomains="true"/>
+    <access origin="http://google.com" subdomains="true"/>
+    
+    <tizen:privilege name="http://tizen.org/privilege/application.launch"/>
+    <tizen:privilege name="http://tizen.org/privilege/location"/>
+</widget>

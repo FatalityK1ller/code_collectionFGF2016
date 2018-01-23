@@ -1,0 +1,1309 @@
+ Algoritmos
+Aqui começa seus primeiros passos para o fabuloso mundo da programação. 
+
+Boa sorte !
+Qualidades ou esforços necessários para ser um bom programador
+Vou enumerar aqui algumas qualidades em um programador que podem ser a chave para o sucesso. Como sucesso, eu defino a satisfação em fazer o que gosta e fazer bem. Se você trabalha com Cobol e é o mestre nisso, mas gostaria mesmo é de estar fazendo um sistema operacional para Nintendo 8 bits, talvez você não tenha sucesso (apesar do que a sua conta bancária diz).
+Vamos à elas:
+·         Gostar de problemas lógicos
+·         Saber inglês
+·         Gostar de aprender e estudar constantemente
+·         Gostar de ler (e estudar constantemente)
+·         Saber buscar as informações (para estudar constantemente)
+Existem diversas outras qualidades que ajudam, como um bom relacionamento inter-pessoal e facilidade de negociação e etc, não vou levar isso mais adiante se não ficaremos aqui por muito tempo.O importante para se tornar um bom programador é ter bastante disciplina, estudar bastante, aprender Inglês, Já ouvi muito essa pergunta, porque preciso aprender inglês para ser um bom programador ?
+E a resposta é bastante simples, porque todos os livros que são lançados nos Estados Unidos e outros países pioneiros da programação só são traduzidos para o português em média 2 anos depois(quando são), sendo assim quem sabe inglês já está por natureza 2 anos na frente de quem não sabe Inglês.Meu professor falou em uma aula de algoritmo uma coisa que realmente é verdade.
+"Você só realmente será bom em alguma coisa quando você praticar aquela coisa por no mínimo 10 mil horas"
+Não sei vocês mais eu concordo plenamente com meu professor.
+
+DOWNLOAD: "APOSTILA DE LÓGICA"
+Pessoal, aprendi bastante com está apostila que estou disponibilizando para download, espero que gostem (fiquem tranquilos, pois não tem vírus no arquivo).
+
+Algoritmos Estruturas Sequenciais
+
+01° Problema: Calcular 2  notas e mostrar a média.
+
+algoritmo media
+Var n1, n2, media de inteiro;
+inicio
+        mostre “Digite um valor para a 1° nota”
+        Leia(n1);
+        mostre “Digite um valor para a 2° nota”
+        Leia(n2);
+        media <- (n1 + n1)/2;
+        Mostre “ A media é  “ + “.”+media;
+fim_algoritmo
+Teste de mesa
+n1 = 6;
+n2 = 9;
+media = (6+9)/2 = 7.5.
+A media é 7.5.
+
+*******************************************************
+02° Problema:  ler o nome de uma pessoa, a sua idade e o seu salário e mostrar as informações.
+algoritmo tipo_dados
+Var
+     Inteiro idade;
+     Real salario;
+     String nome;
+Inicio
+       mostrar “Digite um nome “;
+       leia(nome);
+       mostrar “Digite a idade “;
+       leia (idade);
+       mostrar “Digite o salario “;
+       leia(salario);
+       mostrar “Seu nome é “+nome;
+       mostrar “Sua idade é “+idade;
+       mostrar “Seu salario é “+salario;
+Fim_algoritmo
+Teste de mesa
+idade = 21 
+salario = 1000
+nome = Adriano
+Adriano
+21
+1000
+*******************************************************
+03° Problema: Duas variáveis (A e B) possuem valores distintos (A:5 e B;10) crie um algoritmo que armazene esses dois valores nessas duas variáveis, e efetue a troca dos valores de forma que A passe a receber o valor de B  e B passe a receber o valor de A. Por fim apresente os valores trocados.
+algoritmo troca_valores
+var a, b, aux de inteiro;
+inicio
+        mostrar “Insira um valor para “A” “;
+        leia(a);
+        mostrar “Insira um valor para “B” “;
+        leia(b);
+        aux <- a;
+        a <- b;
+        b <- aux;
+        mostrar “Os valores trocados são”+a+b;
+fim_algoritmo
+Teste de mesa
+A = 5        a =2
+B = 2        b = 5
+Aux =5
+*******************************************************
+04° Problema: O custo ao consumidor de um carro novo, é  a soma do custo de fábrica com o percentual do revendedor e com os custos dos impostos (aplicados ao custo de fabrica).
+Supondo que a percentagem do revendedor seja de 25% e que os impostos custam 45% do custo de fabrica, faça um algoritmo que leia o custo de fabrica e determine o preço final do automóvel (custo ao consumidor).mostre as informações que jugar necessário.
+algoritmo consumidor
+var cf, pr, ci, pf de real;
+inicio
+         mostrar “ Digite o custo de fabrica do automóvel”;
+         leia(cf);
+         pr <- (cf *25)/100;
+         ci <- (cf*45)/100;
+         pf <- pr+ci+cf
+         mostrar “ O preço final ao consumidor é “+pf;
+fim.
+Teste de mesa
+Cf= 45000
+Pr= (45000*0,25) =11250
+Ci= (45000*0,45)=20250
+Pf= 45000+11250+20250=76500
+*******************************************************
+05° Problema: O sistema de avaliação de determinada disciplina,é composto por três provas.
+A primeira prova tem peso 2, a segunda prova tem peso 3, a terceira prova tem peso 5. Faça um algoritmo para calcular  a media final de um aluno desta disciplina.
+algoritmo aluno_media
+var p1, p2, p3, m_f de inteiro;
+inicio
+         mostrar “Digite o valor da 1° prova “;
+         leia(p1);
+         mostrar “Digite o valor da 2° prova “;
+         leia(p2);
+         mostrar “Digite o valor da 3° prova “;
+         leia(p3);
+         p1 <-(p1*2)/10;
+         p2 <- (p2*3)/10;
+         p3 <- (p3*5)/10;
+        nf ß p1+p2+p3;
+        mostrar “ A media final é “+nf;
+fim_algoritmo
+Teste de mesa
+P1 = 7....7*0,2 = 1.4
+P2 = 5...5*0,3 = 1.5
+P3 = 9...9*0,5= 4.5
+M_f = 1.4+1.5+4.5 = 7,5
+*******************************************************
+06° Problema:  Um cliente de um banco tem um saldo positivo de R$500,00.  Fazer um algoritmo que leia o cheque que entrou e calcule o saldo, mostrando (escrevendo) o saldo na tela.
+algoritmo cliente_banco
+var saldo, c de real;
+inicio
+        mostrar “Insira o valor do cheque “;
+        leia (c);
+        saldo <- 500
+        saldo <- saldo – c;               
+        mostrar “Seu saldo é “+saldo;
+fim_algoritmo
+Teste de mesa
+Saldo = 500;
+C  = 600
+C = 500 – 600 = -100;
+*******************************************************
+07° Problema: Uma empresa de vendas de  softwares paga a seu vendedor um fixo de R$800,00 reais por mês, mais uma comição de 15% pelo seu valor de vendas no mês.  Faça um algoritmo que leia o valor da venda e determine o salário total do funcionário.
+Mostre as informações que você achar necessário.
+algoritmo vendas
+Var fixo, comicao, valor_venda, salario_total de real;
+inicio
+         mostrar “ Insira o valor total de vendas”;
+         leia(valor_vendas);
+          fixo <- 800;
+         comicao <- (valor_venda * 15)/100;
+         salario_total <- fixo + comicao;
+         mostrar “O salario total do funcionário é”+salario_total;
+fim_algoritmo
+Teste de mesa
+Valor_venda
+Fixo = 800
+Comicao = 25000*0,15 = 3750
+Salario_total = 800 + 3750 = 4550.
+*******************************************************
+08° Problema: Uma empresa de desenvolvimento de softwares paga a seu vendedor um fixo de R$500  por mês, mais um bônus de R$50 por sistema vendido.  Faça um algoritmo que leia quantos softwares o funcionário vendeu e determine o salário total do funcionário. Mostre as informações que você achar necessário.
+algoritmo vendas2
+var fixo, bônus, salario_total de real;
+sis_vendido inteiro; 
+inicio
+        mostrar “Digite a quantidade de software vendidos”;
+        leia(sis_vendido);
+        fixo <- 500;
+        bônus <- sis_vendido * 50;
+        salario_total <- fixo + bônus;
+        mostrar “O salario final do funcionário é”+salario_total;
+fim_algoritmo
+Teste de mesa
+Fixo = 500
+Sis_vendido = 5
+Bônus = 5 * 50 = 250
+Salario_total = 500+250 = 750
+*******************************************************
+09° Problema: Considerando que para um consorcio, sabe-se o numero total de prestações, a quantidade de prestações pagas e o valor atual da prestação, escreva um algoritmo que determine o total pago pelo consorciado e o saldo devedor.
+Var qtp, qpp, vap, tp, sd de real;
+inicio
+        mostrar “Insira a quantidade total de prestações”;
+        leia(qtp);
+        mostrar ”Insira a quantidade de prestações pagas”;
+        leia(qpp);
+        mostrar “Entre com o valor atual das prestações”;
+        leia(vap);
+        tp <- (qtp – qpp)*vap;
+        sd <- (qpp - qtp)*vap;
+        mostrar”Você já pagou “+tp;
+        mostrar”Seu saldo devedor é”sd;
+fim_algoritmo
+Teste de mesa
+Qtp = 48
+Qpp = 25
+Vap = 305
+Tp = (48 – 25)*305 = 7500
+Sd =(25 - 48)*305 = 7015
+*******************************************************
+10° Problema:  Analisando a formula “ prestação = valor + (valor * (taxa/100) * tempo)”, crie um algoritmo para efetuar o calculo do valor de uma prestação em atraso. Você deverá ler o valor da prestação, a taxa de juros imposta pelo banco, e o numero de dias em atraso.
+algoritmo prestacao
+var vp, t de real;
+da de inteiro;
+inicio
+         mostrar “Digite o valor da prestação”;
+         leia(vp);
+         mostrar “Digite o valor da taxa”;
+         leia(t);
+         mostrar “Digite a quantidade de dias em atraso”;
+         leia(da);
+         vp  <- vp +(vp*(t/100)*t);
+        mostrar “ O valor final com “+da+” é “+vp;
+fim_algoritmo  
+
+Estrutura Condicional
+01° Problema: Crie duas variáveis (A, B) e leia 1 valor para cada uma delas. Disponibilize elas de forma crescente.
+
+algoritmo crescenteAB
+Var a, b de inteiro;
+Inicio
+        Mostrar “Digite um valor para A”;
+        Leia (a);
+        Mostrar “Digite um valor para B”;
+        Leia (b);
+        Se (a >b)
+             Mostrar “Em ordem crescente fica”+b+a;
+        Senao
+             Mostrar “Em ordem crescente fica”+a+b;
+Fim_algoritmo
+Teste de mesa
+A = 5                  
+b = 9
+*******************************************************
+02° Problema: O sistema de avaliação de determinada disciplina,é composto por três provas.
+A primeira prova tem peso 2, a segunda prova tem peso 3, a terceira prova tem peso 5. Faça um algoritmo para calcular a media final de um aluno desta disciplina. E se a media do aluno for maior ou igual a 6, mostrar APROVADO, senão, mostrar REPROVADO.
+
+algoritmo prova_peso
+Var p1, p2, p3, mf,  numerico;
+Inicio
+        Mostrar “Digite o valor da 1° prova”;
+        Leia(p1);
+        Mostrar “Digite o valor da 2° prova”;
+        Leia(p2);
+        Mostrar “Digite o valor da 3° prova”;
+        Leia(p3);
+        p1 <- (p1*2)/10;
+        p2 <-(p2*3)/10;
+        p3 <-(p3*5)/10;
+        mf <- p1+p2+p3;       
+       se (mf >= 6)
+            mostrar “APROVADO com média”+mf;
+       senao
+           mostrar “REPROVADO com média”+mf;
+Fim_algoritmo
+Teste de mesa
+P1 = 5...(5*2)/10 = 1
+P2 = 8...(8*2)/10 =1.6
+P3 = 7...(7*2)/10 =1.4
+Mf  = 1+1.6+1.4 = 4
+REPROVADO com média  4;
+
+*******************************************************
+03° Problema:  O sistema de avaliação de determinada disciplina é composto por três provas.   A primeira prova tem peso 2, a segunda prova tem peso 3, a terceira prova tem peso 5. Faça um algoritmo para calcular a media final de um aluno desta disciplina. E se a media do aluno for maior ou igual a 7 , mostrar APROVADO, senão, se a nota for maior que 4 e menor que 7, mostrar RECUPERAÇAO, senão, se for menor que 4, mostrar, REPROVADO.
+
+algoritmo media_final_se
+Var p1, p2, p3, mf,  numerico;
+Inicio
+        Mostrar “Digite o valor da 1° prova”;
+        Leia(p1);
+        Mostrar “Digite o valor da 2° prova”;
+        Leia(p2);
+        Mostrar “Digite o valor da 3° prova”;
+        Leia(p3);
+        p1 <- (p1*2)/10;
+        p2 <- (p2*3)/10;
+        p3 <- (p3*5)/10;
+        mf <- p1+p2+p3;       
+       se (mf >= 7)
+            mostrar “APROVADO com média”+mf;
+       else if (mf >= 4)
+            mostrar “RECUPERAÇÃO com média”+mf;
+       else
+            mostrar “REPORVADO com média”+mf;
+Fim.
+Teste de mesa
+P1 = 5...(5*2)/10 = 1
+P2 = 8...(8*2)/10 =1.6
+P3 = 7...(7*2)/10 =1.4
+Mf  = 1+1.6+1.4 = 4
+RECUPERAÇÃO com média  4;
+
+
+*******************************************************
+04° Problema: Uma loja oferece para seus clientes, um determinado desconto de acordo com o valor da compra efetuada. O desconto é de 10%, se o valor da compra for até R$200  15% se menor ou igual  R$500,00 e 20% se for acima de R$500.  Crie um algoritmo que leia o nome do cliente e o valor da compra. Mostre ao final o nome do cliente, o valor da compra, o percentual de desconto e o seu valor e o valor total a pagar deste cliente.
+
+algoritmo desconto_se
+Var  valor_compra, valor_desconto, valor_pagar de real
+Desconto de inteiro;
+Nome caracter;
+Inicio
+       Mostrar “Insira o nome do cliente “;
+       Leia(nome);
+       Mostrar “Digite o valor da compra”;
+       Leia(valor_compra);
+       Se (valor_compra <= 200)
+            Desconto <- 10
+       Senao se (valor_compra <= 500)
+            Desconto <- 15
+       Senao
+            Desconto <- 20
+      Valor_desconto <- (valor_compra*desconto)/100;
+      Valor_pagar  <- valor_comra – valor_desconto;
+      Mostrar “O nome é”+nome;
+      Mostrar “Valor da compra foi de “+valor_compra;
+      Mostrar “ O percentual de desconto é “+desconto;
+      Mostrar “ O valor do desconto foi de “+valor_desconto;
+      Mostrar “O total a pagar é “+valor_pagar;
+Fim.
+Faça o teste de mesa
+
+*******************************************************
+04° Problema: Um cliente de um banco tem um saldo positivo de R$ 500,00.  Fazer um algoritmo que leia  um cheque que entrou e ANALISE se o cheque poderá ser descontado ou não, já que este cliente não possui limite. Se o cheque não poderá ser descontado, mostre essa informação, caso contrario, desconte o cheque   e informe o saldo na tela.
+
+algoritmo cheque_se
+Var saldo, cheque, real;
+Inicio
+        Saldo <- 500; 
+        Mostrar “Digite o valor do cheque”;
+        Leia(cheque);
+        Se (cheque <= saldo)
+             Inicio_se                            
+                           Saldo <- saldo – cheque;
+                           Mostrar “Seu novo saldo é “+saldo;    
+             Fim_se
+        Senao
+              Inicio_se 
+                Mostrar “ATENÇÃO.......NÃO É POSSÍVEL DESCONTAR ESSE CHEQUE, SALDO INSUFICIENTE”;
+              Fim_se 
+Fim.
+Faça o teste de mesa (fácil)
+
+*******************************************************
+05° Problema: Fazer um algoritmo que análise três valores inteiros (através das variáveis n1, n2, n3), e informe qual é o menor e qual é o maior de
+
+Modelo 1                                                         
+algoritmo menor_maior_se
+Var   n1, n2, n3 de inteiro;
+Inicio
+       Mostrar “Digite um valor para n1”;
+       Leia(n1);
+       Mostrar “Digite um valor para  n2”;
+       Leia(n2);
+       Mostrar “Digite um valor para n3”;
+       Leia(n3);  
+ Se (n1 >=n2) e (n1 >=n3) então
+       Mostrar “o maior é o n1”;
+Senao se (n2 >=n1) e (n2 >=n3) então
+       Mostrar “O maior é o n2”;
+Senao
+       Mostrar”O maior é o n3” 
+Se (n1 <=n2) e (n1 <=3) então
+       Mostrar “o menor é o n1”;
+ Senao se (n2 <=n1) e (n2 <=n3) então
+      Mostrar “O menor é o n2”;
+Senao
+      Mostrar”O menor é o n3”
+fim.
+Teste de mesa
+N1 = 2          5 
+N2 = 3          2
+N3 = 5
+
+Modelo2
+algoritmo menor_maior_se
+Var n1, n2, n3 de inteiro;
+Inicio
+       Mostrar “Digite um valor para n1”;
+       Leia(n1);
+       Mostrar “Digite um valor para  n2”;
+       Leia(n2);
+       Mostrar “Digite um valor para n3”;
+       Leia(n3);  
+ Se (n1 >=n2) e (n1 >=3) então
+       Mostrar “o maior é o n1”+n1;
+Senao se (n2 >=n1) e (n2 >=n3) então
+       Mostrar “O maior é o n2”+n2;
+Senao
+       Mostrar”O maior é o n3” 
+Se (n1 <=n2) e (n1 <=3) então
+       Mostrar “o menor é o n1”+n1;
+ Senao se (n2 <=n1) e (n2 <=n3) então
+      Mostrar “O menor é o n2”+n2;
+Senao
+      Mostrar”O maenor é o n3”
+fim.
+Teste de mesa
+N1 = 2          5 
+N2 = 3          2
+N3 = 5
+
+
+*******************************************************
+06° Problema: Crie um algoritmo que leia três valores le,ld,li e verifique se eles podem ser os comprimentos dos lados de um triângulo, e se forem, verificar se é um triângulo equilátero, isósceles ou escaleno. Se eles não formarem um triângulo, escrever a mensagem "Não é um triângulo".
+Antes da elaboração do algoritmo, torna-se necessária a revisão de algumas propriedades e definições.
+Propriedade - O comprimento de cada lado de um triângulo é menor do que a soma dos comprimentos dos outros dois lados, fora desta condição as medidas não são consideradas de um triângulo.
+Definição 1 - Chama-se triângulo equilátero os que tem os comprimentos dos três lados iguais,
+Definição 2 - Chama-se triângulo isósceles por ter  os comprimentos de dois lados iguais.
+Definição 3 - Chama-se triângulo escaleno o triângulo que tem os comprimentos dos três lados diferentes.
+
+algoritmo triangulos
+Var le, ld, li de numérico;
+Inicio
+        Mostrar “Insira o valor da LINHA ESQUERDA”;
+        Leia(le);
+        Mostrar “Insira o valor da LINHA DIREITA”;
+        Leia(ld);
+        Mostrar “Insira o valor da LINHA INFERIOR”;
+        Leia(li);
+       Se ((le<(ld+li) e (ld <(le+li)) e (li< (le+ld))
+             Se ((le = ld)  ou (le = li)) então
+                  Mostrar “É um triangulo equilátero”;
+             Se ((le = ld) ou (ld = li) ou (li = le)) então
+                  Mostrar “É um triangulo isósceles “;
+             Senao
+                  Mostrar “É um triangulo escaleno”;
+        Senao
+                  Mostrar “Não é triangulo”;
+Fim_algoritmo
+Faça o teste de mesa  (fácil)
+
+*******************************************************
+07° Problema: Ler três valores inteiros para as variáveis A, B, C. Apresentar os valores dispostos em ordem crescente.
+
+algoritmo crescenteabc
+Var a, b, c  de inteiro;
+Inicio
+         Mostrar “Insira um valor para A ”;
+         Leia(a);
+         Mostrar “Insira um valor para B ”;
+         Leia(b);
+         Mostrar “Insira um valor para C ”;
+         Leia(c);
+         Se (a<=b) e (a<=c)  então
+              Se (b<=c) então
+                    mostrar “Em ordem crescente ficou”+a+b+c;
+              Senao
+                    mostrar “Em ordem crescente ficou”+a+c+b;
+              fim_se
+        fim_se
+       senao se (b<=a) e (b<=c) então
+                se (a<=c) então
+                     mostrar “Em ordem crescente ficou”+b+a+c;
+                senão
+                     mostrar “Em ordem crescente ficou”+b+c+a;      
+                  fim_se
+        fim_se
+       senao
+                se (a<=b) então
+                     mostrar”Em ordem crescente ficou”+c+a+b;
+                senao
+                      mostrar”Em ordem crescente ficou”+c+b+a;
+                fim_se
+       fim_se
+           
+Fim_algoritmo.
+Teste de mesa
+A = 9         
+B = 3
+C = 1
+
+
+*******************************************************
+08° Problema: mês_se; Ler para uma variável inteira um numero de 1 a 12 e mostrar o nome do mês correspondente. Caso o mês não existir, mostrar essa informação.
+ Var  mês de inteiro;
+Inicio
+     Mostrar “Digite o mês de 1 a 11”;
+     Ler(mes);
+     Se (mês = 1) então   Mostrar “ Janeiro”
+     Senao (mês = 2) então mostrar “Fevereiro”;
+     Senao (mês = 3) então mostrar “Março”;
+     Senao (mês = 4) então mostrar “Abril”;
+     Senao (mês = 5) então mostrar “Maio”;
+     Senao (mês = 6) então mostrar “Junho”;
+     Senao (mês = 7) então mostrar “Julho”;
+     Senao (mês = 8) então mostrar “Agosto”;
+     Senao (mês = 9) então mostrar “Setembro”;
+     Senao (mês = 10) então mostrar “Outubro”;
+     Senao (mês = 11) então mostrar “Novembro”;
+     Senao (mês = 12) então mostrar “Dezembro”;
+     Senao
+               Mostrar “Atenção.....Esse mês não existe”;
+Fim_algoritmo.
+
+
+*******************************************************
+09° Problema: MÊS_case;  Ler para uma variável inteira um numero de 1 a 12 e mostrar o nome do mês correspondente. Caso o mês não existir, mostrar essa informação.
+
+algoritmo mes_case
+Var mês de inteiro;
+Inicio
+        Mostrar “  Insira o mês de 1 a 11”;
+        Leia(mes);
+          Case mês seja
+     1 <- mostrar “ Janeiro”
+     2 <- mostrar “Fevereiro”;
+     3 <- mostrar “Março”;
+     4 <- mostrar “Abril”;
+     5 <- mostrar “Maio”;
+     6 <- mostrar “Junho”;
+     7 <- mostrar “Julho”;
+     8 <- mostrar “Agosto”;
+     9 <- mostrar “Setembro”;
+     10 <-mostrar “Outubro”;
+     11 <-mostrar “Novembro”;
+     12 <-mostrar “Dezembro”;
+     Senao 
+             Mostrar “Atenção.....Esse mês não existe”;
+    Fim_case
+Fim_se
+Fim_algoritmo
+
+*******************************************************
+10° Problema:  Ler uma variável de numero inteiro e mostre se ela e par ou se ela é impar.
+
+algoritmo par_impar
+Var num de inteiro;    mod = (num % 2==0)
+Inicio
+        Mostrar “Insira um numero “;
+        Leia(num);
+        Se (num mod 2=0)então
+             Mostrar “Esse numero é par”;
+       Senao
+            Mostrar “Esse numero é impar”;
+Fim_algoritmo
+
+Faça o teste de mesa (fácil)
+
+
+*******************************************************
+11° Problema: Ler uma variável de um numero inteiro e mostrar a tabuada desse numero.
+
+ algoritmo tabuada
+ Var numero de inteiro
+ Inicio
+        Mostrar “Insira um valor para a tabuada”;
+        Leia(numero);
+        Mostrar numero +“x 1=”+(numero*1);
+        Mostrar numero +“x 2=”+(numero*2);
+        Mostrar numero +“x 3=”+(numero*3);
+        Mostrar numero +“x 4=”+(numero*4);
+        Mostrar numero +“x 5=”+(numero*5);
+        Mostrar numero +“x 6=”+(numero*6);
+        Mostrar numero +“x 7=”+(numero*7);
+        Mostrar numero +“x 8=”+(numero*8);
+        Mostrar numero +“x 9=”+(numero*9);
+ Fim_algoritmo
+
+Laço de Repetição
+
+01° Problema: Ler uma variável de um numero inteiro e mostrar a tabuada desse numero. Usando o laço de repetição PARA (FOR).                                                                                              
+
+Algoritmo tabuada_para
+Var i, numero de inteiro;
+Inicio
+        mostre “ Digite um numero para a nossa tabuada”;
+        ler (numero);
+        para (i  de 1 até 9) faça
+               inicio_para
+                 mostrar  numero +”x”+i+”=”+(numero*i);
+               fim_para
+Fim_Algoritmo.
+Faça o teste de mesa
+
+*******************************************************
+02° Problema: Ler uma variável de um numero inteiro e mostrar a tabuada desse numero. Usando o laço de repetição ENQUANTO (WHILE)
+
+algoritmo tabuada_enquanto
+var i, numero de inteiro;
+inicio
+        mostre “ Digite um numero para a nossa tabuada”;
+         ler (numero);
+         i <-1;
+        enquanto(i  <= 9) faça
+                       inicio_enquanto
+                                  mostrar  numero +”x”+i+”=”+(numero*i);
+                      fim_enquanto                    
+fim_algoritmo
+Faça o teste de mesa
+
+*******************************************************
+03°  Problema:  Ler uma variável de um numero inteiro e mostre a tabuada desse número. Usando o laço de repetição repita.
+
+algoritmo_tabuada_repita
+var i, numero de inteiro
+inicio
+         mostre “ Digite um numero para a nossa tabuada”;
+         ler (numero);
+         i <-1;
+         repita
+                 inicio_repita
+                            mostrar  numero +”x”+i+”=”+(numero*i);
+                 fim_repita
+        ate que (i <=9)
+fim_algoritmo
+
+*******************************************************
+04° Problema:  Faça um algoritmo que faça a seguinte série; 10, 20, 30, 40 ......980, 990, 1000; escolha o laço de repetição apropriado para o exercício;  ( usar laço FOR).
+
+algoritmo_serie_para
+var i de inteiro;
+inicio
+        para ( i  de 10 ate 1000 passo10) faça
+              inicio_para
+                      mostre i;      
+             fim_para
+fim_algoritmo
+Faça o teste de mesa
+
+
+*******************************************************
+05° Problema: Ler a nota de 10 alunos, calcular a média e mostrar essa média. (laço PARA).
+
+algoritmo_media_para
+var nota, i, calc_media, soma_notas de inteiro;
+inicio
+        soma_notas <-0;
+         para (i de 1 até 10) faça
+               inicio_para
+                     mostrar “Digite a “+i+”° nota de 10 notas”;
+                     Ler(nota);
+                     soma_notas <- soma_notas +nota;
+              fim_para
+        calc_media <- soma_notas/10;
+        mostre “A média das 10 notas é “+calc_media;
+fim_algoritmo
+Faça o teste de mesa
+
+*******************************************************
+06° Problema: Mostre os 10 primeiros números pares.
+
+algoritmo_pares10;
+var conta_pares, numero de inteiro;
+conta_pares <- 0;
+inicio
+         para ( conta_pares <= 10) faça
+             inicio_para
+                     se (numero mod 2=0) então
+                        inicio_se
+                     mostre “O numero “+numero+” é par;
+                    conta_pares <- conta_pares+1;
+                    fim_se
+             fim_para
+fim_algoritmo
+
+
+*******************************************************
+07° Problema: ler dois números (inicial e final, sendo que o final não pode ser menor que o número inicial). Escreva quantos números pares e quantos números impares encontram-se entre os dois números fornecidos pelo usuário.
+
+Algoritmo par_impar_conta;
+Var numero_inicial, numero_final, numeros_pares, numeros_impares,i de inteiro;
+Inicio
+      Numeros_pares  <- 0;
+      Numeros_impares <- 0;
+      numero_final <- 0;
+      Mostre “Digite o número inicial.: “;
+      Ler(numero_inicial);
+      I <- numero_inicial;
+      Repita
+      Inicio_repita
+           Mostre “Digite o número final maior que o inicial.: “;
+           Ler(numero_final);
+              Se (numero_final < numero_inicial) entao
+                Mostrar “Número final inválido, deve ser maior do que o inicial”)
+       Final_repita
+       Até que(numero_final >= numero_inicial);
+      Enquanto(i <= numero_final) faça
+      Inicio_enquanto
+             Se (i mod 2 = 0) entao
+                  Numeros_pares <- Numeros_pares + 1;
+             Senao
+                 Numeros_impares <- Numeros_impares + 1;
+             i <- i + 1;
+      Fim_enquanto
+      Mostrar “Entre o numero “+numero_inicial+” e o numero “+numero_final+” existem “+numeros_pares+” pares e “+numeros_impares+” impares”;
+Fim_algoritmo
+Faça o teste de mesa
+*******************************************************
+
+Vetores
+01° Problema: Ler a nota de 5 alunos, calcular a média e mostrar essa média e mostrar também quantos alunos ficaram com a sua nota igual ou acima da média. (usando vetores)
+
+Algoritmo media_media_vetor;
+var notas: vetor [1..5] de real;
+       calc_media, soma_notas de real;
+       contador de inteiro;
+inicio   
+       contador <-0;
+       mostrar “digite a 1. nota.: ”;
+       ler(notas[1]);
+       mostrar “digite a 2. nota.: ”;
+       ler(notas[2]);
+       mostrar “digite a 3. nota.: ”;
+       ler(notas[3]);
+       mostrar “digite a 4. nota.: ”;
+       ler(notas[4]);
+       mostrar “digite a 5. nota.: ”;
+       ler(notas[5]);   
+       soma_notas <- notas[1]+notas[2]+notas[3]+notas[4]+ notas[5];
+       calc_media <- soma_notas / 5;
+        se (notas[1] >= calc_media) entao
+              contador <- contador + 1;
+        se (notas[2] >= calc_media) entao
+              contador <- contador + 1;
+        se (notas[3] >= calc_media) entao
+              contador <-contador + 1;
+        se (notas[4] >= calc_media) entao
+              contador <- contador + 1;
+        se (notas[5] >= calc_media) entao
+              contador <- contador + 1;
+         mostrar “a média é “+calc_media;
+         mostrar contador + “ alunos ficaram com a nota acima da media”;
+         mostrar “.......final do sistema ....”;
+Fim_algoritmo
+Teste de Mesa
+Calc_media=30/5=6
+Soma_notas=5+9+7+3+6 = 30
+Contador=0,1,2,3
+
+*******************************************************
+02°  Problema: Ler a nota de 5 alunos, calcular a media e mostrar essa média e mostrar também quantos alunos ficaram com a sua nota igual ou acima da média. (usando vetores)
+
+Algoritmo media_media_vetor_correto;
+var notas:vetor [1..5] de real;
+       calc_media, soma_notas de real;
+       i, contador de inteiro;
+inicio
+      soma_notas <- 0;   
+       contador <- 0;
+       para i de 1 até 5 faça
+       inicio_para
+                mostrar “digite a “+i+”. nota.: ”;
+                ler(notas[i]);
+                 soma_notas <- soma_notas + notas[i];
+       fim_para
+       calc_media <- soma_notas / 5;
+       para i de 1 até 5 faça
+       inicio_para
+                se (notas[i] >= calc_media) entao
+                     contador <- contador + 1;
+        fim_para
+        mostrar “a média é “+calc_media;
+        mostrar contador + “ alunos ficaram com a nota acima da media”;
+        mostrar “.......final do sistema ....”;
+Fim_algoritmo
+Teste de Mesa
+Calc_media=36/5=7.2
+Soma_notas=0,8,13,20,29,36
+Contador=0,1,2
+I = 1,2,3,4,5,6,1,2,3,4,5,6
+A media é 7.2
+2 alunos ficaram com a nota acima da media
+
+
+*******************************************************
+04°  Problema: Fazer um algoritmo que análise 10 valores inteiros,  informar qual o maior e qual o menor deles.
+
+Algoritmo maior_menor_vetor;
+Var maior_menor:vetor [1..10] de inteiro;
+        I, maior, menor  de inteiro;
+Inicio
+       Maior <-0;
+       Menor <-99999;
+       Maior_menor[] <- {2,3,7,8,5,9,1,0,6,4};
+       Para i de 1 até 10 passo 1 faça
+       Inicio
+               Se maior_menor[i] > maior entao
+                    maior <- maior_menor[i];
+               se maior_menor[i] < menor entao
+                    menor <- maior_menor[i];
+       fim
+      Mostre “o maior valor .: “+maior;
+      Mostre “o menor valor  .: “+menor;
+Fim.
+Teste de Mesa
+Maior_menor
+P
+	
+1
+	
+2
+	
+3
+	
+4
+	
+5
+	
+6
+	
+7
+	
+8
+	
+9
+	
+10
+V
+	
+2
+	
+3
+	
+7
+	
+8
+	
+5
+	
+9
+	
+1
+	
+0
+	
+6
+	
+4
+Maior=0,2,3,7
+Menor=99999,2
+I=1,2,3,4 ...........
+
+
+*******************************************************
+05°  Problema: Crie um algoritmo que leia um vetor de 5 elementos. Calcule e mostre a soma desses elementos, a media, quantos elementos são iguais ou maiores do que a média, o percentual dos elementos que são maiores ou iguais a media e mostrar quantos desses elementos são positivos e quantos são negativos;
+
+Algoritmo complexo_vetor ;
+Var vetor5 :vetor [1..5] de inteiro;
+      Media, soma,  perc_maior de real;
+        I, iguais_maior, , qtd_pos, qtd_neg de inteiro;
+Inicio
+    Media <-0;
+    Soma <-0;
+    iguais_maior <- 0;
+    perc_maior <- 0;
+    qtd_pos <- 0;
+    qtd_neg <-0;
+     vetor5[ ] <- {9,3,7,8,5};
+      Para i de 1 até 5 passo 1 faça
+               Soma <-soma + vetor5[i];
+      Media <- soma / 5;
+      Para i de 1 até 5 passo 1 faça
+      inicio
+                Se vetor5[i] > media entao
+                 iguais_maior = iguais_maior + 1;
+            se vetor5[i] >= 0 entao
+                 qtd_pos <- qtd_pos + 1;
+            senao
+                  qtd_neg <- qtd_neg + 1;
+     fim
+     perc_maior <- (iguais_maior * 100) / 5;
+     mostrar “ A soma foi .: “+soma;
+     mostrar “a media foi .: “+media;
+     mostrar perc_maior+”% são maiores ou iguais a média”;
+     mostrar iguais_maior +”são iguais ou maiores do que a media”;
+     mostrar qtd_pos +” são positivos”;
+     mostrar qtd_neg + “são negativos”;
+Fim_algoritmo
+
+*******************************************************
+06°  Problema: Crie um algoritmo lendo um vetor A de 3 elementos do tipo inteiro. Mostre esses elementos do vetor A. Reordene os elementos em ordem crescente, atualize o vetor A com os elementos na ordem crescente e mostre novamente o vetor A.
+
+Algoritmo vetor_crescente;
+Var A:vetor [1..3] de inteiro;
+       i, j, aux de inteiro;
+Inicio
+     A[ ] <- {9,3,7};
+     Mostrar “O valor de A[1] =”+A[1];
+     Mostrar “O valor de A[2] =”+A[2];
+     Mostrar “O valor de A[3] =”+A[3];
+     Para j de 1 até 2 passo 1 faça 
+           Para i de 1 até 2 passo 1 faça
+                  Se A[i] > A[i+1] entao
+                  Inicio_se
+                      Aux <- A[i];
+                      A[i] <- A[i+1];
+                      A[i+1] <- aux;
+                 Fim_se;
+     Mostrar “O valor de A[1] =”+A[1];
+     Mostrar “O valor de A[2] =”+A[2];
+     Mostrar “O valor de A[3] =”+A[3];
+Fim_algoritmo
+Teste de Mesa
+A = Vetor
+Posicao
+	
+1
+	
+2
+	
+3
+valor
+	
+50
+	
+21
+	
+14
+
+Posicao
+	
+1
+	
+2
+	
+3
+valor
+	
+14
+	
+21
+	
+50
+I=1,2,3,1,2,3
+Aux=50,50,21
+J=1,2,3
+
+*******************************************************
+07°  Problema: Crie um algoritmo lendo um vetor A de 15 elementos do tipo inteiro. Mostre esses elementos do vetor A. Reordene os elementos em ordem crescente, atualize o vetor A com os elementos na ordem crescente e mostre novamente o vetor A.
+
+Algoritmo vetor_crescente_15;
+Var A:vetor [1..15] de inteiro;
+       i, j, aux de inteiro;
+Inicio
+     A[ ] <- {9,3,7,6,21,50,45,36,2,8,7,9,42,32,18};
+     Para i de 1 até 15 faça
+           Mostrar “O valor Original de A[“+i+”] =”+A[i];
+    
+     Para j de 1 até 14 passo 1 faça 
+           Para i de 1 até 14 passo 1 faça
+                  Se A[i] > A[i+1] entao
+                  Inicio_se
+                      Aux  <-A[i];
+                      A[i] <- A[i+1];
+                      A[i+1] <- aux;
+                 Fim_se;
+     Para i de 1 até 15 faça
+           Mostrar “O valor atualizado de A[“+i+”] =”+A[i];
+Fim_algoritmo
+Faça o teste de mesa
+
+
+*******************************************************
+08° Problema: Crie um algoritmo lendo um vetor A de 15 elementos do tipo inteiro. Mostre esses elementos do vetor A. Reordene os elementos em ordem decrescente, atualize o vetor A com os elementos na ordem decrescente e mostre novamente o vetor A.
+
+Algoritmo vetor_decrescente_15;
+Var A:vetor [1..15] de inteiro;
+       i, j, aux de inteiro;
+Inicio
+     A[ ] <- {9,3,7,6,21,50,45,36,2,8,7,9,42,32,18};
+     Para i de 1 até 15 faça
+           Mostrar “O valor Original de A[“+i+”] =”+A[i];
+    
+     Para j de 1 até 14 passo 1 faça 
+           Para i de 1 até 14 passo 1 faça
+                  Se A[i] < A[i+1] entao
+                  Inicio_se
+                      Aux <- A[i];
+                      A[i] <- A[i+1];
+                      A[i+1] <- aux;
+                 Fim_se;
+     Para i de 1 até 15 faça
+           Mostrar “O valor atualizado de A[“+i+”] =”+A[i];
+Fim_algoritmo
+Faça o teste de mesa
+
+
+*******************************************************
+09° Problema: Crie um algoritmo lendo dois vetores (A e B) de 5 elementos cada do tipo inteiro, liste os elementos destes dois vetores. Faça com que os elementos do vetor A passem para o vetor B, e os elementos do vetor B passem para o vetor A. Mostre os 2 vetores atualizados. 
+
+Algoritmo vetores_troca_5;
+Var A,B, C:vetor [1..5] de inteiro;
+       I de inteiro;
+Inicio
+     A[ ] <- {9,3,7,6,21};
+     B[ ] <- {50,45,36,2,14};
+     Para i de 1 até 5 faça
+     inicio
+           Mostrar “O valor Original de A[“+i+”] =”+A[i];
+           Mostrar “O valor Original de B[“+i+”] =”+A[i];
+     Fim;
+      Para i de 1 até 5 passo 1 faça
+      Inicio_se
+                 C[i] <- A[i];
+                 A[i] <- B[i];
+                  B[i <- C[i];
+      Fim_se;
+     Para i de 1 até 5 faça
+     inicio
+           Mostrar “O valor Atualizado de A[“+i+”] =”+A[i];
+           Mostrar “O valor Atualizado de B[“+i+”] =”+A[i];
+     Fim_para
+Fim_algoritmo
+Faça o teste de mesa
+
+
+*******************************************************
+Matrizes
+
+
+01° Problema: Crie um algoritmo que gere uma matriz exerc_matriz 3x3, inserir dados nos elementos dessa matriz, por fim, mostre os dados contidos na matriz.
+
+ Algoritmo matriz_3x3;
+Var exerc_matriz:matriz [1..3,1..3] de inteiro;
+       l, c de inteiro;
+Inicio
+     Para l de 1 até 3 faça
+         Para c de 1 até 3 faça
+          Inicio
+                Mostrar “Digite valor para exerc_matriz[“+l+”,”+c+”].: ”;
+                Ler(exerc_matriz[l,c]);
+           Fim;
+     Para l de 1 até 3 faça
+        Para c de 1 até 3 faça
+            Mostrar “O valor de exerc_matriz[“+l+”,”+c+”].: ”+exerc_matriz[l,c];
+Fim_algoritmo
+Teste de Mesa
+Exerc_matriz
+	
+C1
+	
+C2
+	
+C3
+L1
+	
+6
+	
+9
+	
+7
+L2
+	
+6
+	
+6
+	
+7
+L3
+	
+5
+	
+3
+	
+7
+L=1,2
+C=1,2,3,4,1
+
+
+*******************************************************
+02° Problema: Crie um algoritmo que gere uma matriz exerc_matriz 3x3, inserir dados nos elementos dessa matriz, por fim, mostre os dados contidos na matriz e mostre qual é o maior e qual é o menor valor da matriz.
+
+Algoritmo matriz_maior_menor;
+Var exerc_matriz:matriz [1..3,1..3] de inteiro;
+       l, c, maior, menor de inteiro;
+Inicio
+     Maior <- 0; menor <- 99999;
+     Para l de 1 até 3 faça
+         Para c de 1 até 3 faça
+          Inicio
+                Mostrar “Digite valor para exerc_matriz[“+l+”,”+c+”].: ”;
+                Ler(exerc_matriz[l,c]);
+           Fim;
+     Para l de 1 até 3 faça
+        Para c de 1 até 3 faça
+        Inicio_para
+            Mostrar “O valor de exerc_matriz[“+l+”,”+c+”].: ”+exerc_matriz[l,c];
+            Se exerc_matriz[l,c] > maior entao
+                    maior <- exerc_matriz[l,c];
+            Se exerc_matriz[l,c] < menor entao
+                    menor <- exerc_matriz[l,c];
+       Fim_para
+       Mostrar “O maior valor da matriz .: “+maior;
+       Mostrar “O menor valor da matriz .: “+menor;
+Fim_algoritmo
+
+*******************************************************
+Ultimo de matriz
+
+Problema: Crie uma matriz 4x4 chamada Mat4 e leia os valores para todos os elementos da matriz e :
+1) mostre essa matriz;
+2) Calcule a soma dos elementos e mostre a soma;
+3) calcule e mostre a média dos elementos da matriz;
+4) mostre os elementos da diagonal principal;
+5) que mostre os elementos da diagonal secundária;
+6) mostre os elementos da linha 3;
+7) mostre os elementos da Coluna 2;
+8) calcule e mostre quantos elementos são números maiores que a média (e mostre esses elementos);
+9) mostre em que posição se encontra o maior e o menor elemento da matriz;
+10) crie uma segunda matriz MatNeri de 4x4 e armazene o conteúdo de cada elemento da matriz multiplicado por 2, mostre os elementos dessa nova matriz;
+11) Que mostre os elementos pares e Impares da matriz, e dizer também quantos são pares e quantos são impares;
+12) Crie um vetor chamado Vetor_neri que contenha os elementos da 2º linha e mostre este vetor
+
+Algoritmo matriz_12questoes;
+Var Mat4:matriz [1..4,1..4] de inteiro;
+        MatNeri:matriz [1..4,1..4] de inteiro;
+         Vetor_adr:vetor[1..4] de inteiro; 
+       l, c, maior, menor,soma, media, com_media, conta_pares, conta_impares de inteiro;
+      elem_vert,elem_sec, elem_l3, elem_c2, mostra_com_media, pos_maior, pos_menor, mostra_pares, mostra_impares, vetadr  de caracter;
+Inicio
+   Maior<- 0; menor<- 99999; soma <- 0; com_media <- 0; conta_pares <- 0;
+   conta_impares  <-0; elem_vert <- “”;  elem_sec <- “”; elem_l3 <-””;    elem_c2 <-””; mostra_com_media <- “”;
+   pos_maior<- “”;pos_menor <- “”; mostra_pares <- “”; mostra_impares <- “”;
+      vetAdr <- “”;
+     Para l de 1 até 4 faça
+         Para c de 1 até 4 faça
+          Inicio
+                Mostrar “Digite valor para Mat4[“+l+”,”+c+”].: ”;
+                Ler(mat4[l,c]);
+                Soma <- soma + mat4[l,c];
+           Fim;
+     Media <- soma / 16;
+     Para l de 1 até 4 faça
+        Para c de 1 até 4 faça
+        Inicio_para
+            Mostrar “O valor de mat4[“+l+”,”+c+”].: ”+mat4[l,c];
+             Se l = c entao    Elem_vert <- elem_vert + mat4[l,c];
+             Se c = (5-l) entao  Elem_sec <- elem_sec + mat4[l,c];
+             Se l = 3 entao  Elem_l3 <- elem_l3 + mat4[l,c];
+             Se c = 2 entao  Elem_c2 <- elem_c2 + mat4[l,c];
+             Se mat4[l,c] >= media entao
+             inicio
+                  com_media <- com_media + 1;
+                   mostra_com_media <- mostra_com_media + mat4[l,c];
+            fim;
+            Se mat4[l,c] > maior entao  Pos_maior <- “mat4[“+l+”,”+c+”]”;
+            Se mat4[l,c] < menor entao Pos_menor <- “mat4[“+l+”,”+c+”]”;
+            MatNeri[l,c] <- Mat4[l,c] * 2;
+           Se mat4[l,c] mod 2 = 0 então
+                Inicio
+                     Conta_pares <- conta_pares + 1;
+                     Mostra_pares <- mostra_pares + mat4[l,c];
+               Fim
+               Senao  Inicio
+                     Conta_impares <- conta_impares + 1;
+                     Mostra_impares <- mostra_impares + mat4[l,c];
+               Fim
+                Se l = 2 então
+                inicio
+                     Vetor_adr[c] <- mat4[l,c];
+                      Vetadr <-  veadr + mat4[l,c];
+                Fim;
+       Fim_para
+       Mostrar “A soma dos elementos da matriz .: “+soma;
+       Mostrar “A media dos valores da matriz .: “+media;
+       Mostrar “Elementos da diagonal principal .: “+Elem_vert;
+       Mostrar “Elementos da diagonal secundaria .: “+Elem_sec;
+       Mostrar “Elementos da linha 3 .: “+Elem_l3;
+       Mostrar “Elementos da Coluna 2 .: “+Elem_c2;
+       Mostrar com_media “ elementos atingiram a media, eles são.: “+mostra_com_media;
+       Mostrar “o maior valor está em “+pos_maior+” e o menor valor está em “+pos_menor;
+  
+        Para l de 1 até 4 faça
+              Para c de 1 até 4 faça
+              inicio
+                   Mostrar “O valor de matadr[“+l+”,”+c+”].: ”+matadr[l,c];
+              Fim;
+
+       Mostrar conta_pares+” são pares, são eles .: “+mostra_pares;
+       Mostrar conta_impares+” são impares, são eles .: “+mostra_impares;
+       Mostrar “O Vetor_adr possui os elementos.: “+vetadr;
+fim_algoritmo
+
+Este algoritmo está disponível na linguagem JAVA...confiram !
+
+Variáveis heterogêneas  
+Crie um algoritmo que leia para um cadastro de cliente, o seu nome, sua idade e o seu salário. E por fim, mostre os valores.
+
+Algoritmo cadastro_cliente;
+Tipo cadastro = registro
+          Nome de caracter;
+          Idade de inteiro;
+          Salario de real;
+Fim;
+Var dados_cliente, dados_funcionario de cadastro;
+Inicio
+        Mostre “Digite o nome do cliente”;
+        Ler(dados_cliente.nome);     
+        Mostre “Digite a idade do cliente”;
+        Ler(dados_cliente.idade);     
+        Mostre “Digite o salário do cliente”;
+        Ler(dados_cliente.salario);
+        Mostre “O nome do cliente .: “+dados_cliente.nome;
+        Mostre “A idade do cliente .: “+dados_cliente.idade;
+        Mostre “O salario do cliente .: “+dados_cliente.salario;
+
+        Mostre “Digite o nome do funcionario”;
+        Ler(dados_funcionario.nome);     
+        Mostre “Digite a idade do Funcionario”;
+        Ler(dados_funcioanrio.idade);     
+        Mostre “Digite o salário do Funcionario”;
+        Ler(dados_funcionario.salario);
+        Mostre “O nome do funcionario .: “+dados_funcionario.nome;
+        Mostre “A idade do funcionario .: “+dados_funcionario.idade;
+        Mostre “O salario do funcionario .: “+dados_funcionario.salario;
+Fim_algoritmo
+
+Subalgoritmos - Modularização
+Problema: subalgoritmos - modularização
+Ler 2 números, efetuar as 4 operações matemáticas e mostrar os resultados.
+
+Algoritmo operações_subalgoritmos;
+var num1, num2, soma, multiplicacao, divisao, subtracao de real;
+procedimento leitura
+inicio
+       Mostrar “Digite o numero 1.:”;
+       Ler(num1)
+       Mostrar “Digite o numero 2.:”;
+       Ler(num2);
+Fim
+Procedimento calculos
+Inicio
+       soma <-num1 + num2;
+       multiplicacao ß num1 * num2;
+       divisao <- num / num2;
+       subtracao <- num1 – num2;
+fim
+procedimento imprimir
+inicio
+       mostrar “A multiplicacao = “+multiplicacao;
+       mostrar “A divisao = “+divisao;
+       mostrar “A Subtracao = “+subtracao;
+       mostrar “A soma =”+soma;   
+fim;
+Inicio
+      Leitura;
+      Calculos;
+      Imprimir;
+Fim_algoritmo
+
+Subalgoritmos – Modularização – Procedimentos com Parâmetros
+01° Problema: Ler 2 números, efetuar as 4 operações matemáticas e mostrar os resultados.
+
+Algoritmo operações_subalgoritmos_parametros;
+var num1, num2, soma, multiplicacao, divisao, subtracao de real;
+procedimento leitura
+inicio
+       Mostrar “Digite o numero 1.:”;
+       Ler(num1)
+       Mostrar “Digite o numero 2.:”;
+       Ler(num2);
+Fim
+procedimento calculos(pn1, pn2 de real)
+Inicio
+       soma ß pn1 + pn22;
+       multiplicacao ß pn2 * pn22;
+       divisao ß pn1 / pn2;
+       subtracao ß pn1 – pn2;
+fim
+procedimento imprimir(mult, div, sub, som)
+inicio
+       mostrar “A multiplicacao = “+mult;
+       mostrar “A divisao = “+div;
+       mostrar “A Subtracao = “+sub;
+       mostrar “A soma =”+som;   
+fim;
+Inicio
+      Leitura;
+      Calculos(num1, num2);
+      Imprimir(multiplicacao,divisao, subtracao, soma);
+Fim_algoritmo
+
+Subalgoritmos – Modularização – Funções
+01° Problema: Ler 2 números, efetuar as 4 operações matemáticas e mostrar os resultados.
+
+Algoritmo subalgoritmos_funcoes;
+var num1, num2, soma, multiplicacao, divisao, subtracao de real;
+procedimento leitura
+inicio
+       Mostrar “Digite o numero 1.:”;
+       Ler(num1)
+       Mostrar “Digite o numero 2.:”;
+       Ler(num2);
+Fim
+função somar(pn1, pn2 de real)  de real;
+Inicio
+       soma <- pn1 + pn22;
+      retorna soma;
+fim
+função multiplicar(pn1, pn2 de real)  de real;
+Inicio
+       multiplicacao <- pn1 * pn22;
+      retorna multiplicacao;
+fim
+função dividir(pn1, pn2 de real)  de real;
+Inicio
+       divisao <-pn1 / pn22;
+      retorna divisao;
+fim
+função subtrair(pn1, pn2 de real)  de real;
+Inicio
+       subtracao <-pn1 - pn22;
+      retorna subtracao;
+fim
+Inicio
+      Leitura;
+      Mostre “A soma .: “+ somar(num1, num2);
+      Mostre “A multiplicacao .: “+ multiplicar(num1, num2);
+      Mostre “A subtração .: “+ subtrair(num1, num2);
+      Mostre “A divisão .: “+ dividir(num1, num2);
+Fim_algoritmo
+

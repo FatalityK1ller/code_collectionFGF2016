@@ -1,0 +1,1725 @@
+ Códigos Visualg
+Algoritmos feito em pseudolinguagem Interpretados pelo programa Visualg.
+
+algoritmo "exercício1"
+// Função :Estruturado
+// Autor : Adriano Cavalcante - tutoslivre@hotmail.com
+// Data : 26/01/2012
+// Apresente o seguinte algoritmo
+// Ler 2 valores, no caso variaveis A e B.
+//Efetuar a soma das variaveis A e B implicando seu resultado na variavel x.
+//Apresentar o valor da variavel X após a soma dos dois valores indicados.*/
+var
+A,B,X:REAL
+inicio
+escreva ("Digite o valor de A.:")
+leia(A)
+escreva ("Digite o valor de B.:")
+leia(B)
+X<- A+B
+escreva ("A soma de A + B é.:",X)
+fimalgoritmo
+*********************************************************************************************
+algoritmo "exercicio2"
+// Função :Estruturado
+// Autor : Adriano Cavalcante - tutoslivre@hotmail.com
+// Data : 26/01/2012
+// 1)a formula pa calcular a área de um a circunferencia é A=piR^.
+//Sendo que o valor de PI = 3,14159 basta estabelecer.
+//a)Ler um valor para raio, no caso a variavel R.
+//b)Efetuar o cálculo da área, elevando o valor de R ao quadrado e multiplicado por PI.
+//c)Apresentar o valor da variavel A
+var
+r,p,a: real
+inicio
+escreva ("Escreva o raio da circunfêrencia.:")
+leia(r)
+escreva ("Digite o valor de PI(3.14159).:")
+leia(p)
+a <- (r*r)*p
+escreva ("A área da circunferência é.:",a)
+fimalgoritmo
+
+*********************************************************************************************
+algoritmo "exercicio3"
+// Função :Estruturado
+// Autor : Adriano Cavalcante - tutoslivre@hotmail.com
+// Data : 26/01/2012
+// Leia duas variaves A e B. A seguir, calcule a soma, a diferença, o produto e a divisão
+//entre elas. A seguir mostre o resultado de cada conta com as mensagens correspondentes.
+var
+A,B,soma, diferenca,produto,divi: real
+inicio
+escreva("Digite um valor para A.:")
+leia (A)
+escreva("Digite um valor para B.:")
+leia (B)
+soma      <- A+B
+diferenca <- A-B
+produto   <- A*B
+divi      <- A/B
+escreval("Soma      .:",soma)
+escreval("Diferênça .:",diferenca)
+escreval("Produto   .:",produto)
+escreval("Divisão   .:",divi)
+fimalgoritmo
+*********************************************************************************************
+algoritmo "exercicio4"
+// Função :Estruturado
+// Autor : Adriano Cavalcante - tutoslivre@hotmail.com
+// Data : 26/01/2012
+// Leia duas notas de um aluno. A seguir, calcule a média do aluno, sabendo que a primeira nota
+// tem peso 3,5 e a segunda nota tem peso 7,5.
+var
+media,n1,n2 : real
+inicio
+escreva("Digite a primeira nota do aluno.:")
+leia(n1)
+escreva("Digite a segunda nota do aluno .:")
+leia(n2)
+limpatela
+n1 <- n1 *3.5
+n2 <- n2 *7.5
+media <- (n1+n2)/10
+escreval("A média ponderada foi.:",media)
+fimalgoritmo
+*********************************************************************************************
+algoritmo "exercicio5"
+// Função :Estruturado
+// Autor : Adriano Cavalcante - tutoslivre@hotmail.
+// Data : 26/01/2012
+// Escreva um algoritmo qua leia o numero de um funcionário, seu seu numero de horas trabalhadas,
+//o valor que recebe por hora e calcule o salário deste funcionário.
+//A seguir, mostre o número e o salário do funcionário.
+var
+nf, nt : inteiro
+vh, st : real
+inicio
+escreva("Digite o numero do funcionário................:")
+leia(nf)
+escreva("Digite o numero de horas trabalhadas...........:")
+leia(nt)
+escreva("Digite o valor que recebe por hora trabalhada..:")
+leia(vh)
+//limpatela
+st <- nt*vh
+escreva("O salário do funcionário número ",nf," é R$",st," reais")
+fimalgoritmo
+*********************************************************************************************
+algoritmo "exercicio6"
+// Função :Estruturado
+// Autor : Adriano Cavalcante - tutoslivre@hotmail.com
+// Data : 26/01/2012
+// Faça um algoritmo que leia o nome de um vendedor, o seu salario fixo e o total de vendas efetuadas por ele no mês.
+// Sabendo que este vendedor ganha 15% de comissão sobre suas vendas efetuadas, infomar o seu saláriono final do mês.
+var
+nv       : literal   // NV. = nome do vendedor
+sf,tv,st : real     // SF = salario fixo   ; TV= total de vendas em reais  ; SF = salario final
+inicio
+escreva ("Digite o nome do vendedor...................:")
+leia(nv)
+escreva ("Digite o salario fixo do vendedor...........:")
+leia(sf)
+escreva ("Digite o total de vendas em dinheiro no mês.:")
+leia(tv)
+escreval
+//limpatela
+st <- (tv*0.15)+sf
+escreval("O salario final do vendedor ",nv," é.......:",st)
+fimalgoritmo
+*********************************************************************************************
+algoritmo "exercico7"
+// Função :Estruturado
+// Autor : Adriano Cavalcante - tutoslivre@hotmail.com
+// Desenvolva um algoritmo que leia o código de uma peça1, o numero de peças1, o valor
+//unitário de cada peça1, o código de uma peça2, o numero de peças2, o valor unitário de cada
+// peça2 e calcula e motra o valor a ser pago.
+var
+p1, np1: inteiro
+vu1p: real
+p2, np2: inteiro
+vu2p: real
+vp: real
+sp1, sp2: numerico
+inicio
+escreval ("1° peça")
+escreva ("Digite o código.:")
+leia(p1)
+escreva ("Digite a qtde.:")
+leia (np1)
+escreva ("Digite o valor unitário.:")
+leia (vu1p)
+escreval
+escreval("2° peça")
+escreva ("Digite o código.:")
+leia(p2)
+escreva ("Digite a qtde.:")
+leia (np2)
+escreva ("Digite o valor unitário.:")
+leia (vu2p)
+sp1 <- np1*vu1p
+sp2 <- np2*vu2p
+vp <- sp1+sp2
+escreval
+escreval ("Valor total a ser pago é R$ ",vp," reais")
+fimalgoritmo
+*********************************************************************************************
+algoritmo "exercico8"
+// Função :Estruturado
+// Autor : Adriano Cavalcante - tutoslivre@hotmail.com
+// Data : 28/01/2012
+// Faça um algoritmo para determinar o consumo médio de um automovél sendo
+//fornecidos a distancia total percorrida pelo automovel e o total de combustivel gasto.
+var
+dp,tc, cm: real
+inicio
+escreva("Digite a distância percorrida.:")
+leia(dp)
+escreva("Digite o total de combustível gasto [lt].:")
+leia(tc)
+cm <- dp/tc
+escreva("O consumo médio do automovél é de ",cm," Km por Lt")
+fimalgoritmo
+*********************************************************************************************
+algoritmo "exercicio9"
+// Função :Estruturado
+// Autor : Adriano Cavalcante - tutoslivre@hotmail.com
+// Data : 28/01/2012
+//  Crie um algoritmo que receba do usuário o valor de uma determinada compra e
+// a quantidade de parcelas que se quer didvidir este valor.
+// O algoritmo deve calcular o valor de cada parcel. Considere que não será acrescido
+// nehnum juro no valor total.
+var
+nome: literal
+vc :real
+qp :inteiro
+mv : real
+inicio
+escreva ("Digite o nome do cliente.:")
+leia(nome)
+escreva("Digite o valor total da compra.:")
+leia(vc)
+escreva ("Digite a qtde de parcelas.:")
+leia(qp)
+mv <- vc /qp
+limpatela
+escreval("O nome do cliente é ",nome)
+escreval("O valor total da compra foi de ",vc," reais x ",qp,"parcelas")
+escreval("O valor de cada parcela é = ",mv," reais")
+escreval("")
+fimalgoritmo
+*********************************************************************************************
+algoritmo "exercicio10"
+// Função :Estruturado
+// Autor : Adriano Cavalcante - tutoslivre@hotmail.com
+// Data : 28/01/2012
+// Faça um algoritmo que leia a idade de uma pessoa em anos, calcule e escreva quantos
+// dias ele(a), viveu, considerar o ano com 365,25 dias.
+var
+idade: real
+inicio
+escreval("Programa para calcúlo de idade")
+escreval()
+escreva ("Qual a sua idade ?.:")
+leia(idade)
+idade <- idade *365,25
+escreva("Você já viveu ",idade," dias")
+escreval("")
+fimalgoritmo
+*********************************************************************************************
+algoritmo "exercicio11"
+// Função :Estruturado
+// Autor : Adriano Cavalcante - tutoslivre@hotmail.com
+
+// Data : 28/01/2012
+//Uma instituição de ensino realizou uma pesquisa sobre os eleitores de um municipio que
+//participaram de última eleição. Faça um algoritmo que leia o total de votos Brancos(vb), nulos(vn) e válidos(vv).
+// Calcule e escreva o percentual que cada um representa em relação ao total de eleitores
+var
+vb, vn, vv:inteiro
+tv, pvb, pvn, pvv: real
+inicio
+escreva("Votos brancos.:")
+leia(vb)
+escreva("Votos nulos  .:")
+leia(vn)
+escreva("Votos válidos.:")
+leia(vv)
+tv<- vb+vn+vv
+pvb <- vb / tv
+pvn <- vn / tv
+pvv <- vv / tv
+escreval("Percentual votos brancos ",pvb, "%")
+escreval("Percentual votos nulos   ",pvn, "%")
+escreval("Percentual votos válidos ",pvv, "%")
+fimalgoritmo
+*********************************************************************************************
+algoritmo "exercicio12"
+// Função :Estruturado
+// Autor : Adriano Cavalcante - tutoslivre@hotmail.com
+// Data : 28/01/2012
+// Veronica distribui sua renda mensal da seguinte forma: 10%  saude, 25% educação, 30% alimentação,
+// 10% vestuário, 5% lazer, 20% outros. Faça um algoritmo que leia a renda mensal liquida de veronica, calcule e escreva
+// o valor em cada item acima citado.
+var
+saude,vest, edu, ali, lazer, out :real
+rmes,gt : real
+inicio
+escreva ("Digite sua renda mensal liquida.:")
+leia(rmes)
+saude <- (rmes*10)/100
+edu   <- (rmes*25)/100
+ali   <- (rmes*30)/100
+vest  <- (rmes*10)/100
+lazer <- (rmes*5)/100
+out   <- (rmes*20)/100
+limpatela
+gt    <- saude+edu+ali+vest+lazer+ out
+escreval ("Valor aplicado em saúde      .:",saude)
+escreval ("Valor aplicado em educação   .:",edu)
+escreval ("Valor aplicado em alimentação.:",ali)
+escreval ("Valor aplicado em vestuário  .:",vest)
+escreval ("Valor aplicado em lazer      .:",lazer)
+escreval ("Valor aplicado em outros     .:",out)
+escreval("Gasto total                  .:",gt)
+fimalgoritmo
+*********************************************************************************************
+algoritmo "exercicio13"
+// Função :Estruturado
+// Autor : Adriano Cavalcante - tutoslivre@hotmail.com
+// Data : 28/01/2012
+// Construa um algoritmo para pagamento de comissão de vendedores de paças, levando-se
+// em consideração que sua comissão será de 3% do total da venda e que você tem os seguintes dados.:
+//1) Identificação do vendedor.
+//2) Código da peça.
+//3) Preço unitário da peça.
+//4) Quantidade vendida.
+//5)Escreva a identificação do vendedor e o valor da comissão.
+var
+nome:literal
+cp, qtde:inteiro
+unit, comi: real
+inicio
+escreva ("Digite o nome do vendedor.:")
+leia(nome)
+escreva("Código da peça.:")
+leia(cp)
+escreva ("Valor unitário da peça.:")
+leia(unit)
+escreva ("Digite a quantidade vendida.:")
+leia(qtde)
+comi<- (qtde*unit)
+escreval
+escreval
+escreval("                     Vendedor.......: ",nome)
+escreval("                     Valor comição..: ",comi)
+escreval()
+fimalgoritmo
+*********************************************************************************************
+algoritmo "exercicio14"
+// Função :Estruturado
+// Autor : Adriano Cavalcante - tutoslivre@hotmail.com
+// Data : 29/01/2012
+// Faça um algoritmo que leia a base e a altura de um triangulo. em seguida, escreva a área do
+//mesmo. obs Área = (base*altura)/2.
+var
+b, at, a : real
+inicio
+escreva ("Digite a base do triangulo.:")
+leia(b)
+escreva ("Digite a altura do triangulo.:")
+leia (at)
+a <- (b*at)/2
+limpatela
+escreval("A Àrea do triangulo é.:",a)
+fimalgoritmo
+*********************************************************************************************
+algoritmo "exercicio15"
+// Função :Estruturado
+// Autor : Adriano Cavalcante - tutoslivre@hotmail.com
+// Data : 29/01/2012
+// Dado as seguintes informações de um funcionário: Nome, idade, cargo e salario.
+//Considere: a) O salario bruto teve um reajuste de 38%.
+//           b) O funicionario receberá uma gratificação de 20% do salario bruto;
+//           c) O salario total é descontado em 15%.
+// Faça um algoritmo para escrever:
+//1) Nome, idade e cargo;
+//2) Salario bruto;
+//3) Salario liquido.
+var
+nome,cargo:literal
+idade:inteiro
+sbruto,desconto,sliquido,reajuste, gratificacao:real
+inicio
+escreva("Digite o nome do funcionário         .:")
+leia(nome)
+escreva("Digite a idade do funcionário        .:")
+leia(idade)
+escreva("Digite o cargo do funcionário        .:")
+leia(cargo)
+escreva("Digite o salario bruto do funcionário.:")
+leia(sbruto)
+limpatela
+reajuste <- (sbruto*38)/100
+gratificacao<- (reajuste*20)/100
+sbruto<- reajuste+gratificacao+sbruto
+desconto<- (sbruto*20)/100
+sliquido <- sbruto - desconto
+limpatela
+escreval("Funcionário.:",nome,", idade.:",idade,", Cargo.:",cargo)
+escreval("Salário bruto.:",sbruto)
+escreval("Desconto.:",desconto)
+escreval("Salário liquido.:",sliquido)
+escreval
+fimalgoritmo
+*********************************************************************************************
+algoritmo "exercicio16"
+// Função :Estruturado
+// Autor : Adriano Cavalcante - tutoslivre@hotmail.com
+// Data : 29/01/2012
+// Uma empresa tem para um determinado funcionario uma ficha contendo o nome, numero de horas trabalhadas e o
+// numero de dependentes. Considerando que:
+//a) A empresa para 20 reias por hora e 40 reais por dependetes.
+//b) Sobre o salario são feitos descontos de 8.5% para INSS e 5% para IR.
+//Faça uma algoritmo para ler o Nome, numero de horas trabalhadas e numero de dependentes.
+//Apos a leitura, escreva qual o nome, salario bruto, os valores descontados para cada tipo de imposto e
+// finalmente qual o salario liquido do funcionario.
+var
+nome : literal
+horas, depen : inteiro
+vh, vd,sal_bruto, inss, ir, salario_liq: real
+inicio
+escreval("FICHA DO FUNCIONÁRIO")
+escreva("Digite o nome do funcionário..........:")
+leia(nome)
+escreva("Digite o números de horas trabalhadas.:")
+leia(horas)
+escreva("Digite a Qtde de dependentes..........:")
+leia(depen)
+vh <- horas*20.00
+vd <- depen*40.00
+sal_bruto <- vh+vd
+inss <- (sal_bruto *8.5)/100
+ir   <- (sal_bruto*0.5)/100
+salario_liq <- sal_bruto - inss - ir
+escreval("Funcionário  .:",nome)
+escreval("Salário bruto.:",sal_bruto)
+escreval("Desconto INSS.:",inss)
+escreval("Desconto IR  .:",ir)
+escreval("Slario liquido.:",salario_liq)
+fimalgoritmo
+*********************************************************************************************
+algoritmo "exercicio17"
+// Função :Estruturado
+// Autor : Adriano Cavalcante - tutoslivre@hotmail.com
+// Data : 29/01/2012
+// O preço de um automovel é calculado pela soma do preço de fabrica  com o preço dos
+//impostos (45% do preço de fabrica) e a porcentagem do revendedor (28% do preço de fabrica).ç
+// Faça um algoritmo que leia o nome do automovel e o preço de fabrica. Escreva o nome do automovel
+// e o preço final.
+var
+nome:literal
+pfabrica,pr,imp,pf: real
+inicio
+escreva ("Digite o nome do automovél.:")
+leia(nome)
+escreva("Digite o preço de fábrica do automovél.:")
+leia(pfabrica)
+imp <- pfabrica*0.45
+pr  <- pfabrica*0.28
+pf<- imp+pr+pfabrica
+limpatela
+escreval("O preço final do automovél.:",nome," é R$.",pf)
+fimalgoritmo
+*********************************************************************************************
+algoritmo "exercicio18"
+// Função :Estruturado
+// Autor : Adriano Cavalcante - tutoslivre@hotmail.com
+// Data : 29/01/2012
+// Faça um algoritmo que receba o valor de um deposito e o valor da taxa de juros, calcule e mostre o
+// valor do redimento e o valor total do rendimento.
+var
+valord, vt,vr, vtdr: real
+inicio
+escreva("Insira o valor do deposito......:")
+leia(valord)
+escreva("Insira o valor da TAXA de juros.:")
+leia(vt)
+vr<- (valord*vt)/100
+vtdr<- vr+valord
+limpatela
+escreval("Rendimento total de....:",vr)
+escreva("Valor total disponível.:",vtdr)
+fimalgoritmo
+*********************************************************************************************
+algoritmo "exercicio19"
+// Função :Estruturado
+// Autor : Adriano Cavalcante - tutoslivre@hotmail.com
+// Data : 29/01/2012
+// A conta de água de uma residencia é a soma do resultado da tarifa de água com a
+// tarifa de esgoto. Faça um algoritmo que leia a tarifa da água, calcule a tarifa de esgoto(80%
+// da tarifa de água) e escreva o valor da conta a ser paga.
+var
+ta, te,vtp: real
+inicio
+escreva("Insira o valor da taxa de Água.:")
+leia(ta)
+te<- ta*0.80
+vtp <- te+ta
+limpatela
+escreval("Taxa de esgoto = ",te)
+escreva("Taxa de esgoto + Taxa de água é =",vtp)
+escreval
+fimalgoritmo
+*********************************************************************************************
+algoritmo "exercicio20"
+// Função :Estruturado
+// Autor : Adriano Cavalcante - tutoslivre@hotmail.com
+// Data : 29/01/2012
+// Crie um algoritmo que leia a quantidade de presenças e faltas de um aluno.
+//Calcule e escreva a sua porcentagem de presenças e faltas em relação ao total de aulas dadas.
+var
+qtdep, qtdef, calc : real
+pp, pf : real
+inicio
+escreva("Insira a QTDE de presenças.:")
+leia(qtdep)
+escreva("In sira a QTDE de faltas...:")
+leia(qtdef)
+calc<- qtdep+qtdef
+pp <- qtdep/calc
+pf <- qtdef/calc
+limpatela
+escreval("Total de aulas..........:",calc)
+escreval("Percentual de presenças.:",pp,"%")
+escreval("Percentual de faltas....:",pf,"%")
+escreval
+fimalgoritmo
+*********************************************************************************************
+algoritmo "exercicio21"
+// Função :Estruturado
+// Autor : Adriano Cavalcante - tutoslivre@hotmail.com
+// Data : 29/01/2012
+// As centrais Elétricas de Goias necessita que você crie um algoritmo que leia:
+// a) O numero da conta, o valor do Kwh, q quantidade de Kwh consumido.
+// b) Calcule e escreva o valor a pagar:
+// c) O valor do ICMS, sabendo que o ICMS é 25% do valor a pagar;
+// d)O numero da conta;
+var
+numconta:literal
+icms,vkwh, qkwh, vpgto: real
+inicio
+escreva("Insira o numero da conta do cliente.:")
+leia(numconta)
+escreva("Insira o valor do Kwh.:")
+leia(vkwh)
+escreva("Insira a qtde de Kwh consumido.:")
+leia(qkwh)
+icms <- vpgto *0.25
+vpgto<- (vkwh*qkwh)+icms
+escreval("Conta ",numconta)
+escreval("Valor total da conta.:",vpgto)
+fimalgoritmo
+*********************************************************************************************
+algoritmo "exercicio22"
+// Função :Estruturado
+// Autor : Adriano Cavalcante - tutoslivre@hotmail.com
+// Data : 29/01/2012
+// Crie um algoritmo que leia o valor unitario de uma garrafa de vinho e quantidade de caixas
+// que uma pessoa quer comprar (só se vende a caixa, nao se vende a garrafa, separadamente).
+//Calcule o valor a pagar pela pessoa, sabendo que a caixa possui 12 unidades.
+var
+vug, vtp :real
+qtdecaixas : inteiro
+inicio
+escreva("Insira o valor unitário da garrafa de vinho.:")
+leia(vug)
+escreval("Insira a Qtde de caixas irá levar.:")
+escreval("Só vendemos a caixa feichada com 12 unidades.")
+leia(qtdecaixas)
+vtp <- (vug*12)*qtdecaixas
+limpatela
+escreval("O valor total é R$",vtp," reais.")
+// Seção de Comandos
+fimalgoritmo
+*********************************************************************************************
+algoritmo "exercicio23"
+// Função :Estruturado
+// Autor : Adriano Cavalcante - tutoslivre@hotmail.com
+// Data : 29/01/2012
+// Calcule e escreva o valor a ser pago a vista em um posto de combustivel.
+//Para isso voce deverá ler o valor do litro do combustivel e a quantidade em litros que voce abasteceu.
+var
+vlc, vtp: real
+qtdel : inteiro
+inicio
+escreva("Digite o valor do litro do combustivél.:")
+leia(vlc)
+escreva("Digite a Qtde de litros abastecidos.:")
+leia(qtdel)
+vtp <- vlc*qtdel
+limpatela
+escreval("Valor à pagar por ",qtdel," Lt de combustível é R$.",vtp)
+fimalgoritmo
+*********************************************************************************************
+algoritmo "exercicio24"
+// Função :Estruturado
+// Autor : Adriano Cavalcante - tutoslivre@hotmail.com
+// Data : 29/01/2012
+// Desenvolva um algoritmo sabendo-se que o valor por hora de uma aula particular é de R$10,00
+//Leia o nome de 3 alunos e a quantidade de horas de cada um. Calcule e escreva o nome e o valor a
+// ser pago por cada aluno e o valor total dos três.
+var
+nome1, nome2, nome3 : literal
+qtde1, qtde2, qtde3 : real
+vt1, vt2, vt3 : real
+vtg : real
+inicio
+escreva("Nome do 1° aluno.:")
+leia(nome1)
+escreva("Nome do 2° aluno.:")
+leia(nome2)
+escreva("Nome do 3° aluno.:")
+leia(nome3)
+escreva("Qtde de horas do 1° aluno.:")
+leia(qtde1)
+escreva("Qtde de horas do 2° aluno.:")
+leia(qtde2)
+escreva("Qtde de horas do 3° aluno.:")
+leia(qtde3)
+vt1 <- qtde1 *10
+vt2 <- qtde2 *10
+vt3 <- qtde3 *10
+vtg<- vt1+vt2+vt3
+//limpatela
+escreval("Aluno, ",nome1,", deve R$",vt1)
+escreval("Aluno, ",nome2,", deve R$",vt2)
+escreval("Aluno, ",nome3,", deve R$",vt3)
+escreval("Captação total R$",vtg)
+escreval
+fimalgoritmo
+*********************************************************************************************
+algoritmo "exercicio25"
+// Função :Estruturado
+// Autor : Adriano Cavalcante - tutoslivre@hotmail.com
+// Data : 29/01/2012
+// Escreva um algoritmo que leia quatro notas de um aluno, calcule a média simples e a
+// média ponderada deste aluno. Admita que os pesos das notas são respectivamente iguais a 1,2,3 e 4.
+// Média simples = (n1+n2+n3+n4)/4
+// Média ponderada = (n1*1+n2*2+n3*3+n4*4)/10
+var
+n1, n2, n3,n4 : inteiro
+ms, mp : real
+inicio
+escreva("Digite a 1° nota.:")
+leia(n1)
+escreva("Digite a 2° nota.:")
+leia(n2)
+escreva("Digite a 3° nota.:")
+leia(n3)
+escreva("Digite a 4° nota.:")
+leia(n4)
+ms <- (n1+n2+n3+n4)/4
+mp <- ((n1*1)+(n2*2)+(n3*3)+(n4*4))/10
+escreval("Média simples...:",ms)
+escreval("Média ponderada.:",mp)
+fimalgoritmo
+*********************************************************************************************
+26 de Maio de 2012
+Olha só que maravilha, novos códigos, aproveitem bastante !
+************************Condicionais**************************
+
+algoritmo "Exercício01"
+// Função : Condicional
+// Autor :  Adriano Cavalcante - tutoslivre@hotmail.com
+var
+A:inteiro
+inicio
+escreval ("entre com o valor de A :")
+leia (A)
+     se (A mod 2)=0 entao
+        escreval ("é par",A^2)
+     senao
+        escreval ("é impar", A^3)
+     fimse
+fimalgoritmo
+***************************************************************************************************
+algoritmo "Exercício02"
+// Função :  Condicional
+// Autor :Adriano Cavalcante - tutoslivre@hotmail.com
+var
+VE:real //VE - VALOR DE ENTRADA
+inicio
+escreva ("Valor de Entrada :")
+leia (VE)
+se VE <= 1200.00  entao
+   escreval ("isento de imposto")
+senao
+   se (VE <= 5000.00) e (VE >= 1200.01) entao
+      escreval (" valor do imposto a ser pago", " ", VE*0.1)
+   senao
+      se (VE <= 10000.00) e (VE >= 5000.01) entao
+         escreval (" valor do imposto a ser pago", " ", VE*0.15)
+      senao
+         se (VE >= 10000.00) entao
+            escreval (" valor do imposto a ser pago", " ", VE*0.2)
+         fimse
+      fimse
+   fimse
+fimse
+fimalgoritmo
+***************************************************************************************************
+algoritmo "Exercício02"
+// Função :Condicional
+// Autor : Adriano Cavalcante - tutoslivre@hotmail.com
+var
+valor:real
+inicio
+escreval("Valor da venda")
+leia (valor)
+
+escolha valor
+caso 0 ate 1200.00
+   escreval ("Isento")
+caso 1200.01 ate 5000.00
+   escreval ("Valor do imposto 10% R$",valor*0.1)
+caso 5000.01 ate 10000.00
+   escreval ("Valor do imposto 15% R$",valor*0.15)
+outrocaso
+   escreval ("Valores acima de 10.000,00 20% R$",valor*0.2)
+fimescolha
+fimalgoritmo
+***************************************************************************************************
+algoritmo "Exercício03"
+// Função : Condicional
+//autor: Adriano Cavalcante - tutoslivre@hotmail.com
+var
+SB, VP: real
+//SB - SALARIO BRUTO
+//VP - VALOR DA PRESTAÇÃO
+inicio
+escreval ("Qual o salário Bruto?")
+leia (SB)
+escreval ("Qual o valor da prestação?")
+leia (VP)
+     se (VP) <=(SB*0.3) entao
+        escreval ("Empréstimo Permitido")
+     senao
+        escreval ("Empréstimo Não Permitido")
+     fimse
+fimalgoritmo
+***************************************************************************************************
+algoritmo "exercício4"
+//Função: Condicional
+//Autor: Adriano Cavalcante - tutoslivre@hotmail.com
+var
+IP: inteiro
+inicio
+escreval ("Informe a idade :")
+leia (IP)
+     se IP < 16 entao
+        escreval ("MENOR")
+     senao
+     fimse
+     se (IP <= 17) e (IP >=16) entao
+        escreval ("EMANCIPADO")
+     senao
+     fimse
+     se IP > 17 entao
+        escreval ("MAIOR")
+     senao
+     fimse
+fimalgoritmo
+***************************************************************************************************
+algoritmo "Exercício05"
+//Função: Condicional
+//Autor: Adriano Cavalcante - tutoslivre@hotmail.com
+var
+A,B,C,X:REAL
+inicio
+A<-2
+B<-5
+C<-6
+A<-(B*C)-(A*B)
+B<-(B^2)-(A+6)
+   escreval ("valor de A1", A, " ", "valor de B1", B)
+   se (B>A) e nao (B<=C) entao
+      B<-(C*2)-(A+2)
+      C<-(B-A)*(C*2)
+          escreval ("valor de B", B, " ", "valor de C", C)
+   senao
+      C<-(C+2)*(A+2)
+      B<-(C*2)-(A*2)
+          escreval ("valor de C", C, " ", "valor de B3", B)
+   fimse
+   X<-A+B+C
+           escreval ("A soma de A, B e C é =", X)
+fimalgoritmo
+***************************************************************************************************
+algoritmo "Exercício06"
+// Função: Condicional
+// Autor : Adriano Cavalcante - tutoslivre@hotmail.com
+var
+   t, as, ef, media:real      // t= nota trabalho     , as= avaliaçao semestral     , ef= exame final;
+   conceito,nome:literal
+inicio
+escreval ("Nome aluno")
+leia(nome)
+escreval ("nota trabalho")
+leia (t)
+escreval ("nota Aval. Semestral")
+leia (as)
+escreval ("nota ex. final")
+leia (ef)
+media<-(t*2+as*3+ef*5)/10
+escolha media
+        caso 8.00 ate 10.00
+             conceito<-"A"
+        caso 7.00 ate 7.99
+             conceito<-"B"
+        caso 6.00 ate 6.99
+             conceito<-"C"
+        caso 5.00 ate 5.99
+             conceito<-"D"
+        caso 0 ate 4.99
+             conceito<-"E"
+fimescolha
+        //saida
+        limpatela
+        escreval("Nome aluno : ", nome)
+        escreval("Media      : ", media)
+        escreval("Conceito   : ",conceito)
+fimalgoritmo
+***************************************************************************************************
+algoritmo "exercicio7"
+// Função: Condicional
+// Autor: Adriano Cavalcante - tutoslivre@hotmail.com
+var
+ altura: real
+ peso:inteiro
+ cla: literal       // cla =classificação
+inicio
+escreva ("Digite sua altura.:")
+leia(altura)
+escreva ("Digite seu peso.:")
+leia(peso)
+se (altura <1.20) e (peso < 60)entao
+    cla <- " A "
+    escreval ("Classificação.:",cla)
+senao
+fimse
+se (altura <1.20) entao
+    se (peso >=60) e (peso<=90 )entao
+    cla <- " D "
+    escreval ("Classificação.:",cla)
+    senao
+    fimse
+    fimse
+se (altura <1.20) e (peso >90)entao
+     cla <- " G "
+     escreval ("Classificação.:",cla)
+fimse
+//ok
+se (altura <=1.70) e (altura >=1.20) entao
+   se (peso <60) entao
+   cla <- "B"
+   senao
+   fimse
+   fimse
+   escreval(cla)
+// ok
+se (altura <=1.70) e (altura >=1.20) entao
+   se (peso >= 60) e (peso <= 90 )entao
+   cla <- "E"
+   escreval (cla)
+   senao
+   fimse
+   fimse
+// ok
+se (altura <=1.70) e (altura >=1.20) entao
+  se (peso > 90) entao
+   cla <- "H"
+   escreva (cla)
+   senao
+   fimse
+   fimse
+//ok
+se altura > 1.70 entao
+  se peso <60 entao
+   cla <- "C"
+   escreva(cla)
+   senao
+   fimse
+   fimse
+//ok
+se altura > 1.70 entao
+  se (peso >=60)e (peso <=90)  entao
+      cla <- "F"
+    escreva (cla)
+    senao
+    fimse
+    fimse
+// ok
+se (altura > 1.70) entao
+   se (peso > 90) entao
+   cla <- " I "
+   escreva ("Classificação.:",cla)
+   senao
+   fimse
+   fimse
+fimalgoritmo
+***************************************************************************************************
+algoritmo "exercicio9"
+//Funçao: Condicional
+// Autor: Adriano Cavalcante - tutoslivre@hotmail.com
+var
+imc,peso, altura : real
+condicao: literal
+inicio
+escreva ("Digite a altura do adulto.:")
+leia(altura)
+escreva ("Digite o peso.:")
+leia(peso)
+imc <- peso/(altura^2)
+escreval (imc)
+se (imc < 18.5) entao
+  condicao<- ("Abaixo da média")
+senao
+fimse
+     se(imc <=25) e (imc >=18.5) entao
+   condicao <- ("Peso normal ")
+senao
+fimse
+    se (imc >=30) e (imc >=25.01) entao
+    condicao<- ("Acima do peso ")
+senao
+fimse
+     se(imc >30)entao
+     condicao <- ("Obeso ")
+senao
+fimse
+ escreval ("Condição = ",condicao)
+fimalgoritmo
+***************************************************************************************************
+algoritmo "exercicio10"
+//Funçao: Condicional
+//Autor: Adriano Cavalcante - tutoslivre@hotmail.com
+var
+pn, pt, pp : real  //pn=preço normal    pt=preço total   pp=preço parcelado
+codigo:literal
+inicio
+//entrada
+escreva ("Digite o preço normal do produto.:")
+leia(pn)
+escreval
+escreval
+escreval ("Código | Condição de pagamento (1,2,3 ou 4)")
+escreval
+escreval ("  1    | À vista em dinheiro ou cheque, recebe 10% de desconto")
+escreval ("  2    | À vista no cartão de crédito, recebe 5% de desconto")
+escreval ("  3    | Em duas vezes, preço normal de etiqueta sem juros")
+escreval ("  4    | Em três vezes, preço normal de etiqueta mais juros de 10%")
+escreval
+escreva  ("Digite o código .:")
+leia(codigo)
+se codigo = "1" entao
+   pt <- pn *0.90
+senao
+   se codigo = "2" entao
+      pt <- pn*0.95
+   fimse
+fimse
+escreval ("O preço total à vista é ",pt)
+se codigo = "3" entao
+   pp <- pn
+senao
+   se codigo = "4" entao
+      pp <- pn*1.10
+   fimse
+fimse
+escreval ("O preço total parcelado é ",pp)
+fimalgoritmo
+***************************************************************************************************
+algoritmo "exercicio11"
+// Função :Condicional
+// Autor : Adriano Cavalcante - tutoslivre@hotmail.com
+// Data : 16/1/2012
+var
+ds,tipo_filme:inteiro //ds - dia da semana
+preco_normal, valor_final:real
+inicio
+// Seção de Comandos - entrada de dados
+escreval ("dia da semana ")
+leia (ds)
+escreval ("Lançamento (1/2) ")
+leia(tipo_filme)
+escreval ("Valor locação fita ")
+leia(preco_normal)
+//processamento
+escolha ds
+        caso 2,3,5
+             se tipo_filme=1 entao
+                valor_final<-preco_normal*1.15
+             senao
+                valor_final<-preco_normal*0.6
+             fimse
+        caso 1,4,6,7
+             se tipo_filme=1 entao
+                valor_final<-preco_normal*1.15
+             senao
+                valor_final<-preco_normal
+             fimse
+fimescolha
+limpatela
+escreval("Valor da locação para o ",ds,"° dia da semana é R$",valor_final)
+fimalgoritmo
+***************************************************************************************************
+algoritmo "exercicio12"
+// Função :Condicional
+// Autor : Adriano Cavalcante - tutoslivre@hotmail.com
+var
+teste1,teste2,teste3 : inteiro
+cc, dr, rt    : real
+atribuicao    : inteiro
+classificacao : inteiro
+inicio
+escreva ("Digite o contéudo do carbono.:")
+leia (cc)
+escreva ("Digite a dureza ROCKWELL    .:")
+leia (dr)
+escreva("Digite a resistencia à tração.:")
+leia (rt)
+se cc < 7  entao
+   teste1<-1
+    senao
+se dr > 50 entao
+   teste2 <-2
+  senao
+se rt >80.000 entao
+  teste3 <- 3
+  senao
+escreva ("atribuição ",atribuicao," teste",teste)
+fimalgoritmo
+***************************************************************************************************
+09 de Junho de 2012
+Laços de Repetição
+
+algoritmo "Exercicio01"
+// Função :  Laço de repetição
+// Autor :   Adriano Cavalcante
+//E-mail: tutoslivre@hotmail.com
+var
+i, numero: inteiro
+inicio
+escreva("Digite um numero para a nossa tabuada  ")
+leia(numero)
+  para i de 1 ate 9 faca
+    escreval( numero ," x ",i,"=",(numero*i))
+    fimpara
+fimalgoritmo
+***************************************************************************************************
+
+algoritmo "Exercicio02"
+// Função :  Laço de repetição
+// Autor :   Adriano Cavalcante
+//E-mail: tutoslivre@hotmail.com
+var
+i, numero: inteiro
+inicio
+I <- 1
+escreva("Digite um numero para a nossa tabuada ")
+leia(numero)
+   enquanto i  <= 9 FACA
+      ESCREVAl (numero ,"x",i,"=",(numero*i))
+      i <- i +1
+   fimenquanto
+   //ok
+fimalgoritmo
+***************************************************************************************************
+
+algoritmo "Exercicio03"
+// Função :  Laço de repetição
+// Autor :   Adriano Cavalcante
+//E-mail: tutoslivre@hotmail.com
+var
+i, numero: inteiro
+inicio
+i <- 1
+escreva ("Digite um numero para a tabuada ")
+leia(numero)
+limpatela
+escreval()
+repita
+     escreval(numero," x ",i," = ",(numero*i))
+     i<-i+1
+     ate i > 9
+fimrepita
+fimalgoritmo
+***************************************************************************************************
+
+algoritmo "Exercicio04"
+// Função :  Laço de repetição
+// Autor :   Adriano Cavalcante
+//E-mail: tutoslivre@hotmail.com
+var 
+i :inteiro
+inicio
+para  i  de 10 ate 1000 passo 10  faca
+ escreval( i)
+fimpara
+fimalgoritmo
+***************************************************************************************************
+
+algoritmo "Exercicio05"
+// Função :  Laço de repetição
+// Autor :   Adriano Cavalcante
+//E-mail: tutoslivre@hotmail.com
+var
+ nota, calc_media, soma_notas : numerico
+i : inteiro
+inicio
+soma_notas <- 0
+para i de 1 ate 5 faca
+   escreva ( "Digite a ",i,"° nota de 10 notas  ")
+   Leia(nota)
+   soma_notas<-soma_notas+nota
+fimpara
+calc_media<-soma_notas/(i-1)
+limpatela
+escreva( "A média das 10 notas é ",calc_media)
+fimalgoritmo
+***************************************************************************************************
+algoritmo "Exercicio06"
+// Função :  Laço de repetição
+// Autor :   Adriano Cavalcante
+//E-mail: tutoslivre@hotmail.com
+var i: inteiro
+inicio
+escreva()
+para i de 1 ate 20 faca
+  se (i mod 2 = 0) entao
+      escreval( "O numero '",i,"' é par")
+  fimse
+fimpara
+fimalgoritmo
+***************************************************************************************************
+algoritmo "Exercicio07"
+// Função :  Laço de repetição
+// Autor :   Adriano Cavalcante
+//E-mail: tutoslivre@hotmail.com
+var i,num_inicial, num_final, num_pares, num_impares: inteiro
+inicio
+num_pares<-0
+num_impares<-0
+i <- num_inicial
+escreva ("Digite o número inicial ")
+leia(num_inicial)
+escreva ("Digite o número final que seja maior que o numero inicial ")
+leia(num_final)
+enquanto (i <= num_final) faca
+     se (i mod 2 = 0) ENTAO
+        num_pares<-num_pares+1
+       senao
+          num_impares<-num_impares+1
+     fimse
+     i<-i+1
+fimenquanto
+escreval("Qtde de números pares = ",(num_pares-1))
+escreval("Qtde de números impares = ",num_impares)
+fimalgoritmo
+***************************************************************************************************
+16 de Junho de 2012
+       "Vetores"  ou  "Matrizes unidimensionais"
+Problema:Ler a nota de 5 alunos, calcular a media e mostrar essa média e mostrar também quantos alunos ficaram com a sua nota igual ou acima da média. (usando vetores)
+algoritmo "Exercicio01"
+// Função : Vetor ou Matriz unidimensional
+// Autor : Adriano Cavalcante - tutoslivre@hotmail.com
+var
+notas:vetor [1..5] de real
+calc_media, soma_notas :real
+contador : inteiro
+inicio
+contador <- 0
+escreva ("digite a 1° nota.: ")
+leia(notas[1])
+escreva ("digite a 2° nota.: ")
+leia(notas[2])
+escreva ("digite a 3° nota.: ")
+leia(notas[3])
+escreva("digite a 4° nota.: ")
+leia(notas[4])
+escreva ("digite a 5° nota.: ")
+leia(notas[5])
+soma_notas <- notas[1]+notas[2]+notas[3]+notas[4]+ notas[5]
+calc_media <- soma_notas / 5
+se (notas[1] >= calc_media) entao
+     contador <- contador + 1
+     fimse
+se (notas[2] >= calc_media) entao
+     contador <- contador + 1
+     fimse
+se (notas[3] >= calc_media) entao
+     contador <- contador + 1
+     fimse
+se (notas[4] >= calc_media) entao
+     contador <- contador + 1
+     fimse
+se (notas[5] >= calc_media) entao
+     contador <-contador + 1
+     fimse
+escreval("A média foi = ",calc_media)
+escreval(contador," Alunos ficaram com a nota acima da mádia")
+escreval(".......final do sistema ........")
+fimalgoritmo
+***************************************************************************************************
+Problema:Ler a nota de 5 alunos, calcular a media e mostrar essa média e mostrar também quantos alunos ficaram com a sua nota igual ou acima da média. (usando vetores)
+algoritmo "Exercicio02"
+// Função : Vetor ou Matriz unidimensional
+// Autor : Adriano Cavalcante - tutoslivre@hotmail.com
+var
+notas:vetor [1..5] de real
+calc_media, soma_notas : real
+i, contador: inteiro
+inicio
+soma_notas <- 0
+contador <- 0
+ para i de 1 ate 4 faca
+    escreva(" digite a ",i,"° nota.: ")
+    leia(notas[i])
+    soma_notas<-soma_notas+notas[i]
+    fimpara
+ calc_media<-soma_notas/5
+ para i de 1 ate 5 faca
+    se (notas[i]>calc_media)entao
+       contador<-contador+1
+       fimse
+    fimpara
+   escreval(" A média é =",calc_media)
+ escreval(contador," Alunos ficaram com a nota acima da media")
+fimalgoritmo
+***************************************************************************************************
+Problema: Fazer um algoritmo que análise 10 valores inteiros  informe qual o maior e qual o menor deles.
+algoritmo "Exercicio03"
+// Função : Vetor ou Matriz unidimensional
+// Autor : Adriano Cavalcante - tutoslivre@hotmail.com
+Var
+maior_menor : vetor [1..10] de inteiro
+i, maior, menor: inteiro
+Inicio
+maior <- 0
+menor <- 99999
+//maior_menor[]<- 2,3,7,8,5,9,1,0,6,4
+para i de 1 ate 5 faca
+escreva("Digite o ",i,"° número.:")
+leia(maior_menor[i])
+fimpara
+Para i de 1 ate 5 passo 1 faca
+  Se maior_menor[i] > maior entao
+      maior <- maior_menor[i]
+      fimse
+  se maior_menor[i] < menor entao
+     menor <- maior_menor[i]
+     fimse
+fimpara
+escreval()
+escreval("O maior valor.: ",maior)
+escreval("O menor valor.: ",menor)
+fimalgoritmo
+***************************************************************************************************
+Problema: Crie um algoritmo que leia um vetor de 5 elementos. Calcule e mostre a soma desses elementos, a media, quantos elementos são iguais ou maiores do que a média, o percentual dos elementos que são maiores ou iguais a media e mostrar quantos desses elementos são positivos e quantos são negativos.
+algoritmo "Exercicio04"
+// Função : Vetor ou Matriz unidimensional
+// Autor : Adriano Cavalcante - tutoslivre@hotmail.com
+Var
+vetoro5:vetor [1..5] de inteiro
+media, soma, perc_maior : real
+i, iguais_maior, qtd_poss, qtd_neg : inteiro
+Inicio
+media <-0
+soma <-0
+iguais_maior <-0
+perc_maior <-0
+qtd_poss <-0
+qtd_neg <-0
+para i de 1 ate 5 faca
+    escreva("Digite o ",i,"° valor.:")
+    leia(vetoro5[i])
+    soma <- soma + vetoro5[i]
+fimpara
+media<-soma/5
+Para i de 1 ate 5 faca
+   Se (vetoro5[i] > media) entao
+      iguais_maior <- iguais_maior + 1
+      fimse
+   se vetoro5[i] >= 0 entao
+      qtd_poss <- qtd_poss + 1
+   senao
+      qtd_neg <- qtd_neg + 1
+fimse
+fimpara
+perc_maior <-(iguais_maior * 100)/5
+escreval("A soma foi .: ",soma)
+escreval("A média foi .: ",media)
+escreval(perc_maior,"% são maiores ou iguais a média")
+escreval(iguais_maior," são iguais ou maiores do que a media")
+escreval(qtd_poss," são positivos")
+escreval(qtd_neg," são negativos")
+fimalgoritmo
+***************************************************************************************************
+Problema: Crie um algoritmo lendo um vetor A de 3 elementos do tipo inteiro. Mostre esses elementos do vetor A. Reordene os elementos em ordem crescente, atualize o vetor A com os elementos na ordem 
+crescente e mostre novamente o vetor A.
+algoritmo "Exercicio5"
+// Função : Vetor ou Matriz unidimensional
+// Autor : Adriano Cavalcante - tutoslivre@hotmail.com
+Var
+A:vetor [1..3] de inteiro
+i, j, aux: inteiro
+Inicio
+A[1] <-9
+A[2] <-3
+A[3] <-7
+escreval("Valores originais !")
+escreval("O valor de A[1] = ",A[1])
+escreval("O valor de A[2] = ",A[2])
+escreval("O valor de A[3] = ",A[3])
+Para j de 1 ate 2 faca
+Para i de 1 ate 2 faca
+Se A[i] > A[i+1] entao
+Aux <- A[i]
+A[i] <- A[i+1]
+A[i+1] <- aux
+fimse
+fimpara
+fimpara
+escreval()
+escreval("valores alterados !")
+escreval("O valor de A[1] =",A[1])
+escreval ("O valor de A[2] =",A[2])
+escreval ("O valor de A[3] =",A[3])
+fimalgoritmo
+****************************************************************************************************
+Problema: Crie um algoritmo lendo um vetor A de 15 elementos do tipo inteiro. Mostre esses elementos do vetor A. Reordene os elementos em ordem crescente, atualize o vetor A com os elementos na ordem crescente e mostre novamente o vetor A.
+algoritmo "Exercicio06"
+// Função : Vetor ou Matriz unidimensional
+// Autor : Adriano Cavalcante - tutoslivre@hotmail.com
+Var
+A:vetor [1..15] de inteiro
+i, j, aux :inteiro
+Inicio
+A[1] <-9
+A[2]<-3
+A[3]<-7
+A[4]<-6
+A[5]<-21
+A[6]<-50
+A[7]<-45
+A[8]<-36
+A[9]<-2
+A[10]<-8
+A[11]<-7
+A[12]<-9
+A[13]<-42
+A[14]<-32
+A[15]<-18
+Para i de 1 ate 15 faca
+     escreval ("O valor Original de A[",i,"] =",A[i])
+     fimpara
+Para j de 1 ate 14 passo 1 faca
+     Para i de 1 ate 14 passo 1 faca
+            Se A[i] > A[i+1] entao
+                aux<-A[i]
+                A[i]<- A[i+1]
+                A[i+1]<-aux
+            fimse
+     fimpara
+     fimpara
+     escreval()
+     escreval()
+Para i de 1 ate 15 faca
+     escreval ("O valor atualizado de A[",i,"] =",A[i])
+fimpara
+fimalgoritmo
+***************************************************************************************************
+Problema: Crie um algoritmo lendo um vetor A de 15 elementos do tipo inteiro. Mostre esses elementos do vetor A. Reordene os elementos em ordem decrescente, atualize o vetor A com os elementos na ordem decrescente e mostre novamente o vetor A.
+algoritmo "Exercicio07"
+// Função : Vetor ou Matriz unidimensional
+// Autor : Adriano Cavalcante - tutoslivre@hotmail.com
+Var
+A:vetor [1..15] de inteiro
+i, j, aux :inteiro
+Inicio
+     A[1] <-9
+     A[2] <-3
+     A[3] <-6
+     A[4] <-21
+     A[5] <-50
+     A[6] <-45
+     A[7] <-36
+     A[8] <-2
+     A[9] <-8
+     A[10] <-7
+     A[11] <-9
+     A[12] <-42
+     A[13] <-32
+     A[14] <-18
+     Para i de 1 ate 15 faca
+     escreval("O valor Original de A[",i,"] =",A[i])
+     fimpara
+     Para j de 1 ate 14 faca
+           Para i de 1 ate 14 faca
+                  Se A[i] < A[i+1] entao
+                      Aux <-A[i]
+                      A[i] <- A[i+1]
+                      A[i+1]<- aux
+                 fimse
+          fimpara
+     fimpara
+     escreval()
+     escreval()
+     Para i de 1 ate 15 faca
+           escreval("O valor atualizado de A[",i,"] =",A[i])
+fimpara
+fimalgoritmo
+***************************************************************************************************
+Problema: Crie um algoritmo lendo dois vetores (A e B) de 5 elementos cada do tipo inteiro, liste os elementos destes dois vetores. Faça com que os elementos do vetor A passem para o vetor B, e os elementos do vetor B passem para o vetor A. Mostre os 2 vetores atualizados.
+
+algoritmo "semnome"
+// Função : Vetor ou Matriz unidimensional
+// Autor : Adriano Cavalcante - tutoslivre@hotmail.com
+Var
+A,B,C:vetor [1..5] de inteiro
+i:inteiro
+Inicio
+A[1]<-9
+A[2]<-3
+A[3]<-7
+A[4]<-6
+A[5]<-21
+B[1]<-50
+B[2]<-45
+B[3]<-36
+B[4]<-2
+B[5]<-14
+     Para i de 1 ate 5 faca
+          escreval("O valor Original de A[",i,"] =",A[i])
+     fimpara
+     escreval()
+     para i de 1 ate 5 faca
+          escreval("O valor Original de B[",i,"] =",B[i])
+     fimpara
+      Para i de 1 ate 5 faca
+           C[i]<-A[i]
+           A[i]<-B[i]
+           B[i]<-C[i]
+      FIMPARA
+      escreval()
+     para i de 1 ate 5 faca
+           escreval( "O valor Atualizado de A[",i,"] =",A[i])
+      fimpara
+      escreval()
+     para i de 1 ate 5 faca
+           escreval("O valor Atualizado de B[",i,"] =",B[i])
+     FIMPARA
+fimalgoritmo
+***************************************************************************************************
+17 de Junho de 2012
+                      Matrizes Bidimensionais.
+Problema: Crie um algoritmo que gere uma matriz exerc_matriz 3x3, inserir dados nos elementos dessa matriz, por fim, mostre os dados contidos na matriz.
+
+algoritmo "Exercicio01"
+Var
+exerc_matriz:vetor [1..3,1..3] de inteiro
+l, c : inteiro
+Inicio
+Para l de 1 ate 3 faca
+   Para c de 1 ate 3 faca
+    escreva("Digite valor para exerc_matriz[",l," ",c,"].: ")
+    leia(exerc_matriz[l,c])
+   fimpara
+fimpara
+Para l de 1 ate 3 faca
+  Para c de 1 ate 3 faca
+    escreval("O valor da matriz[",l," ",c,"].: ",exerc_matriz[l,c])
+  fimpara
+fimpara
+fimalgoritmo
+***************************************************************************************************
+Problema: Crie um algoritmo que gere uma matriz exerc_matriz 3x3, inserir dados nos elementos dessa matriz, por fim, mostre os dados contidos na matriz e mostre qual é o maior e qual é o menor valor da matriz.
+
+algoritmo "Exercici02"
+Var
+exerc_matriz : vetor [1..3,1..3] de inteiro
+ l, c, maior, menor : inteiro
+Inicio
+maior <-0
+menor <- 99999
+Para l de 1 ate 3 faca
+   Para c de 1 ate 3 faca
+       escreva("Digite valor para exerc_matriz[",l," ",c,"].:")
+       Leia(exerc_matriz[l,c])
+     fimpara
+     fimpara
+escreval()
+Para l de 1 ate 3 faca
+  Para c de 1 ate 3 faca
+      escreval("O valor de exerc_matriz[",l," ",c,"].: ",exerc_matriz[l,c])
+      Se exerc_matriz[l,c] > maior entao
+         maior<-exerc_matriz[l,c]
+      fimse
+      Se exerc_matriz[l,c] < menor entao
+         menor<-exerc_matriz[l,c]
+      fimse
+  fimpara
+fimpara
+escreval()
+escreval("O maior valor da matriz .: ",maior)
+escreval("O menor valor da matriz .: ",menor)
+fimalgoritmo
+***************************************************************************************************
+
+
+
+algoritmo "Alg Carango Velho"
+//20. A concessionária de veículos “CARANGO VELHO” está vendendo os seus veículos com desconto. Faça um
+//que calcule e exiba o valor do desconto e o valor a ser pago pelo cliente de vários carros. O desconto
+//deverá ser calculado de acordo com o ano do veículo. Até 2000 - 12% e acima de 2000 - 7%. O sistema deverá
+//perguntar se deseja continuar calculando desconto até que a resposta seja: “(N) Não” . Informar total de carros com
+//ano até 2000 e total geral.
+var
+valor_auto:real
+valor_desconto:real
+valor_ser_pago:real
+i:inteiro
+desconto:real
+ano:inteiro
+resposta:caracter
+conta_menor:inteiro
+conta_maior:inteiro
+inicio
+escrevaL("                   *********************************************")
+escrevaL("                   *              CARANGO VELHO                *")
+escrevaL("                   *********************************************")
+escreval()
+escreval()
+enquanto i <= 5 faca
+   escreva("Entre com o valor do veiculo para calcular o desconto  ")
+   leia(valor_auto)
+   escreva("Digite o ano do automovel  ")
+   leia(ano)
+   se(ano <=2000) entao
+     desconto <- valor_auto*0.12
+     conta_menor <- conta_menor+1
+     escreval("Desconto de 12% =",desconto)
+     escreval("Valor a ser pago ",(valor_auto-desconto))
+   senao
+      escreval()
+     desconto <- valor_auto*0.07
+     conta_maior<-conta_maior+1
+     escreval("Desconto de 7% =",desconto)
+     escreval("Valor a ser pago ",(valor_auto-desconto))
+   fimse
+   ESCREVAL()
+   ESCREVAL()
+   escreva("Deseja continuar calculando ? ")
+       leia(resposta)
+           se (resposta = "sim") entao
+           i<-i+1
+           escreval()
+           fimse
+           se (resposta ="nao") entao
+           i<-6
+           fimse
+fimenquanto
+escreval()
+escreval("Total de veiculos com ano até 2000=",conta_menor)
+escreval("Total geral de Veiculos=",(conta_menor+conta_maior))
+escreval("?")
+fimalgoritmo
+
+
+
+E agora?
+Agora você pode compartilhar este post nas redes sociais e/ou deixar um comentário com sua opinião sobre o assunto. Compartilhe, não custa nada e leva menos de um minuto!
+Enviar por e-mailBlogThis!Compartilhar no TwitterCompartilhar no FacebookCompartilhar com o Pinterest
+20 comentários:
+
+    Anônimo25 de novembro de 2012 12:14
+
+    Muito bacana o blog, precisei de ajuda para resolver um algoritmo e encontrei no blog...
+    Responder
+    Anônimo28 de novembro de 2012 13:06
+
+    Muito legal esse blog pena que para o que eu precisava não estava respondido, o 36 da primeira lista estou com um aqui muito parecido com esse...
+
+    :(
+    Responder
+    Jean Nascimento6 de julho de 2013 16:36
+
+    muito legal o blog só que não achei a resposta para a que eu queria a numero 5 da segunda lista.
+    Responder
+    Eloy_b8 de julho de 2013 00:35
+
+    Olá gostei muito dos exemplos, poderia enviar os enunciados dos exercícios de condicionais e laços de repetição pois é pra mim irá servir de grande valia para melhorar ainda mais a parte de interpretação...
+    Responder
+    Anônimo20 de agosto de 2013 22:11
+
+    ta fácil
+    Responder
+    Respostas
+        edson fernandes oliveira31 de outubro de 2013 21:54
+
+        Alguém pode resolver esta algoritmo para mim…é o seguinte…Desenvolver uma solução computacional para calcular a média dos alunos de um determinado curso da faculdade.poderiam montar a formula, obrigado
+        Responder
+    juca12 de setembro de 2013 16:32
+
+    muito grato por me ajudar. está me servindo muito
+    Responder
+    Respostas
+        Adriano Cavalcante12 de setembro de 2013 23:25
+
+        Que bom Juca a ideia do Tutos Livre é justamente essa, ajudar a todos.
+        Responder
+    Anônimo18 de setembro de 2013 00:37
+
+    AGORA ESTOU CONSEGUINDO ENTENDER MELHOR COMO SE FAZ UM ALGORITIMO ATRAVEZ DESTE BLOG....
+    Responder
+    Gustavo The Brothers30 de outubro de 2013 10:55
+
+    boa dia amigo ... preciso fazer um algoritmo que lê 20 numeros. Depois lê mais um número que deverá ser pesquisado entre os lidos anteriormente.O algoritmo deve mostrar se esse número foi encontrado e, caso positivo, em qual posição.
+
+    usando: para de ate passo faço
+    se entao
+    Agradesço se você me ajudar .
+    Responder
+    Unknown30 de outubro de 2013 23:22
+
+    quero fazer um losango com asteristicos tem como me ajudar
+    Responder
+    edson fernandes oliveira31 de outubro de 2013 21:55
+
+    Alguém pode resolver esta algoritmo para mim…é o seguinte…Desenvolver uma solução computacional para calcular a média dos alunos de um determinado curso da faculdade.poderiam montar a formula, obrigado
+    Responder
+    Anônimo4 de novembro de 2013 13:36
+
+    eu queria um algoritmo de recarda de celular alguem poderia me mandar por favor me ajudem !!!!! serei mmuiito grata :)
+    Responder
+    Respostas
+        Anônimo5 de novembro de 2013 08:52
+
+        kkkkkkk... Favor entrar em contato com a operadora de telefonia, caso o código exista eles vão te fornecer, só não esquece de postar aqui para ajudar a galera....
+        Responder
+    Anônimo5 de novembro de 2013 10:57
+
+    gostaria da ajudad e vocês neste algoritmo...
+    Faça um algoritmo que leia o salario total e apresente quanto o usuario iria ganhar de adiantamento. Considere 40% de adiantamento (0,4) e tambem o salario final .. pseudocodigo...... visualg
+
+    desde ja agradeço
+    Responder
+    Strike Nesuab5 de novembro de 2013 12:47
+
+    Eu preciso de um algoritmo que resolva um sistema linear pelo método de Gauss, escalonamento.
+    Responder
+    Gabri9elah11 de novembro de 2013 21:37
+
+    Alguém responde?
+
+    Construa um programa que apresente o valor de H, sendo H calculado por:
+
+    H=1+2+3+4+...+N o valor de N será apresentado pelo usuário.
+
+    ----
+
+    Escrever um algoritmo que leia 50 números e informar quantos deste valores são negativos, calcule a soma dos positivos, mostre o percentual de números pares e a média de números impares,
+
+    -----
+
+    Foi feita uma pesquisa de audiência de canal de televisão em várias casas de uma determinada cidade, será fornecido o número de casa e o canal de televisão que estiver ligado no momento, caso a televisão estiver desligada é fornecido o número zero, bem como para residência fechada, Calcular e informar: a quantidade de residência, fechada televisores desligados, e a quantidade de residencias com a televisão sintonizada no canal dois. Encerra a pesquisa quando fornecido para o número da residência um valor negativo.
+    Responder
+    Cindy Emanueli11 de março de 2014 18:22
+
+    Queria saber se dá para unir vetores e matrizes em um algoritmo?
+    Responder
+    Leonardo Redaelli30 de julho de 2014 15:33
+
+    EM VISUALG linguagem PORTUGOL.
+    1)Faça um algoritmo que copie o conteúdo de um vetor em um segundo vetor
+    2)Faça um algoritmo que some o conteúdo de dois vetores e armazene resultado em um terceiro vetor
+    3)Faça um algoritmo que faça a união de dois vetores de mesmo tamanho e mesmo tipo em um terceiro vetor com dobro do tamanho
+    4)Leia 3 notas e os nomes de 4 alunos. Escreva no final o nome e a média de cada aluno Se a média for maior ou igual a 6 escreva “ Aluno Aprovado”,caso a média for menor que 6, escreva ”Aluno Reprovado”.
+    5)Escreva um algoritmo que leia dois vetores A e B de tamanho 10 e gere um vetor C e D que contenha: a) Vetor C _ a soma entre A e B; b) Vetor D _ a diferença entre A e B;
+    6)Escreva um algoritmo que leia um vetor A de tamanho 10 e gere um vetor B e C que contenha: a) Vetor B – recebe todos os pares ; b) Vetor C – recebe todos os impares; c) Imprimir os 3 vetores
+    Responder
+    Anônimo22 de novembro de 2014 11:45
+
+    QUESTÃO 1 [10 pts]
+
+    Cansado de fazer contas com sua velha calculadora na mercearia, o Sr. Manoel deseja modernizar seu
+
+    estabelecimento. Para isso ele comprou um computador novo e um leitor de código de barras para fazer uma
+
+    automação comercial de sua loja e facilitar seu trabalho. Apesar de ter todo o hardware necessário, Sr. Manoel ainda
+
+    precisa de um programa de computador que possa fazer contas sobre os produtos vendidos.
+
+    Sr. Manoel, conhecido por ser muito cauteloso, decidiu implementar o novo sistema para apenas cinco produtos de
+
+    sua mercearia, relacionados na tabela abaixo:
+
+    Código do Produto Nome do Produto Preço
+
+    812 Arroz tipo 1 R$ 9,30
+
+    104 Feijão de corda R$ 3,95
+
+    337 Sabão preto R$ 1,05
+
+    594 Coador de pano R$ 2,25
+
+    628 Bucha natural R$ 0,95
+
+    Você foi contratado para fazer o software desse estabelecimento, que fará a conta do valor total das compras de
+
+    cada cliente. Em entrevista para implementação do software, o Sr. Manoel explicou o que deseja para o software:
+
+    “Meu camarada, eu quero uma mensagem bem bonita na hora que eu abrir o programa, pois o cliente da
+
+    minha mercearia vai ver essa mensagem e precisa ser chamativa. Se tiver desenhinho melhor!”
+
+    “Depois de mostrar a mensagem, o programa deve esperar para receber os códigos dos produtos para
+
+    contabilizar o valor da compra e confirmar na tela o produto comprado.”
+
+    “A cada código obtido na entrada de dados (leitor de código de barras), o produto deve ser contabilizado no
+
+    valor total da compra do cliente e deve ser mostrado na tela o nome do produto comprado.”
+
+    “O programa deve receber códigos de produtos até o comando de fechar a compra, dado pelo usuário.”
+
+    “O fechamento da compra é feito quando eu aperto o número zero no teclado do computador, em que deve
+
+    ser exibido o valor total da compra (em reais) e o número de itens que foram comprados.”
+
+    “Se você conseguir ainda implementar um comando de ‘cancelamento do último item’ passado no leitor de
+
+    código de barras (em que o caixa digita o número ‘1’ e o último item é cancelado da compra), ora pois... eu
+
+    te dou um mês de compras grátis na minha mercearia! E ainda posso pedir ao professor pra você ganhar uns
+
+    pontinhos a mais aí...”
+
+    ?Lembre-se: o seu programa deve ser agradável de usar, a interação com o usuário e as informações geradas pelo
+
+    programa devem ser as mais claras possíveis.
+    Responder
+
+Carregar mais...
+
+Deixe aqui seu comentário, isso enriquece nosso blog e nos ajuda a crescer.
+
+Página inicial
+Assinar: Postagens (Atom)
+Procurar No Blog
+	
+Seguidores
+Cadastre seu e-mail e receba novidades
+	

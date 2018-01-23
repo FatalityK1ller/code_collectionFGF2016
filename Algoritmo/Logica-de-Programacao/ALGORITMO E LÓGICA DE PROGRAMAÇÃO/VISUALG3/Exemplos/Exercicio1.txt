@@ -1,0 +1,111 @@
+algoritmo "Exercicio1"
+// Função :
+// Autor :
+// Data : 26/05/2015
+var
+// Seção de Declarações
+     i,x : inteiro
+     xvet : vetor[1..3] de real
+     A,B,C : real
+Flag1,Flag2 : logico
+      xtecla : Caracter
+
+// procedimento para colocar em ordem numerica
+Procedimento POR_ORDEM()
+Var
+    j,k : inteiro
+ XTEMPOR: Real
+Inicio
+   PARA K DE 1 ATE 3 FACA
+        PARA J DE K ATE 3 FACA
+             SE XVET[K] > XVET[J] ENTAO
+                XTEMPOR := XVET[K]
+                XVET[K] := XVET[J]
+                XVET[J] := XTEMPOR
+              FIMSE
+        FIMPARA
+   FIMPARA
+Fimprocedimento
+
+inicio
+// Seção de Comandos 
+Flag1 := verdadeiro
+Enquanto Flag1 Faca
+    Limpatela
+    Escreva("Digite o primeiro numero: ")
+    Leia(A)
+    
+    Escreva("Digite o segundo numero: ")
+    Leia(B)
+
+    Escreva("Digite o terceiro numero: ")
+    Leia(C)
+
+    Flag2 := Verdadeiro
+    Enquanto Flag2 faca
+       LimpaTela
+       Escreval("ordem de entrada dos numeros")
+       Escreval(A)
+       Escreval(B)
+       Escreval(C)
+
+       Escreval(" ")
+       Escreval(" =============== ")
+       Escreval(" ")
+
+       Escreval("*** M E N U ***")
+       Escreval("1 - Mostra os numeros em ordem crescrente")
+       Escreval("2 - Mostra os numeros em ordem decrescrente")
+       Escreval("3 - Mostra os numeros em ordem de entrada")
+       Escreval("0 - Encerrar e sair do programa")
+       Escreval(" ")
+       Escreval(" ")
+       Escreva("Digite uma opção: ")
+       Leia(x)
+       SE (X > 3) ENTAO
+          Flag2 := Verdadeiro
+       SENAO
+           Flag2 := Falso
+       FIMSE
+    FimEnquanto
+
+    SE X = 0 ENTAO
+       Flag1 := Falso
+    SENAO
+
+       xvet[1] := A
+       xvet[2] := B
+       xvet[3] := C
+
+       POR_ORDEM()
+
+       Escreval(" ")
+       Escreval(" ")
+
+       SE X = 1 ENTAO
+          Escreval("Ordem numerica crescente")
+          Para I de 1 ate 3 FACA
+               Escreval(xvet[i])
+          Fimpara
+       FIMSE
+       SE X = 2 ENTAO
+          Escreval("Ordem numerica decrescente")
+          Para I de 3 ate 1 Passo -1 FACA
+               Escreval(xvet[i])
+          Fimpara
+       FIMSE
+       SE X = 3 ENTAO
+          Escreval("Igual a ordem de entrada")
+          Escreval(A)
+          Escreval(B)
+          Escreval(C)
+       FIMSE
+
+       Escreva("Tecle <<Enter>>")
+       Leia(xTecla)
+       
+       Flag1 := Verdadeiro
+       
+    FIMSE
+FimEnquanto
+fimalgoritmo

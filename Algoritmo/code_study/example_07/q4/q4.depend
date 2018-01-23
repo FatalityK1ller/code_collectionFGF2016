@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1463885191 source:/home/cleilson/Documentos/q4/main.c
+	<stdio.h>
+	<stdlib.h>
+

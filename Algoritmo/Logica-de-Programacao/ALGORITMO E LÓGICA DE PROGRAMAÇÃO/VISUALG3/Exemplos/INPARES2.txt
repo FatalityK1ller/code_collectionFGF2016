@@ -1,0 +1,42 @@
+  
+   
+Algoritmo "INPARES"
+// Disciplina  : [Linguagem e Lógica de Programação] 
+// Professor(a): Antonio Carlos Nicolodi 
+// Descrição   : Mostrar numeros 10 impares USANDO O VISUALG 3.0
+// Autor(a)     : para o Baptista Firmino Neves
+// Data atual  : 11/07/2015
+Var
+// Seção de Declarações das variáveis 
+
+n1 : inteiro
+IMPAR : VETOR[1..10] DE INTEIRO
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+
+   LIMPATELA
+   PARA n1 de 1 ATÉ 10 FAÇA
+              ESCREVA("Digite o número [",n1,"] : ")
+              LEIA(IMPAR[n1])
+   FIMPARA
+
+   LIMPATELA
+
+// MOSTRANDO OS 10 NUMEROS   
+   PARA n1 de 1 ATÉ 10 FAÇA
+              ESCREVA("Número [",n1,"] :=  ",IMPAR[n1] : 3 )
+   FIMPARA
+
+// Mostrando os impares
+   LIMPATELA           
+   FIMPARA
+   PARA n1 de 1 ATÉ 10 FAÇA
+              SE ( n1 MOD 2 ) = 1 ENTÃO   
+                   ESCREVAL(n1)   // <= assim mostrará só os impares
+              FIMSE 
+   FIMPARA
+
+Fimalgoritmo
+  
+  

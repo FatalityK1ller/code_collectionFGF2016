@@ -1,0 +1,57 @@
+algoritmo "Exercicio3"
+// Função :
+// Autor :
+// Data : 27/05/2015
+var
+// Seção de Declarações
+   xnum : Inteiro
+ xTecla : Caracter
+    Flag: Logico
+inicio
+// Seção de Comandos 
+   Flag := Verdadeiro
+   Enquanto Flag faca
+      LimpaTela
+      Escreva("Digite um numero Inteiro: ")
+      Leia(xnum)
+      Escreval(" ")
+      Escreval("            Verificando se o numero é par ou impar")
+      Escreval(" ")
+      Escreval(" ")
+      Escreval("****(Primeira maneira)****")
+      Escreval(" ")
+      Escreval("se INT(xnum/2) for igual à xnum/2 ==> (verificando seus multiplos) ")
+      Escreval(" ")
+      SE INT(xnum/2) = xnum/2 ENTAO
+         Escreval("O número é PAR !")
+      SENAO
+         Escreval("O número é IMPAR ")
+      FIMSE
+
+      Escreval(" ")
+      Escreval(" ")
+      Escreval("****(Segunda maneira)****")
+      Escreval(" ")
+      Escreval("se (xnum MOD 2) for igual à 0 (zero) ==>(verificando o seu modulo)")
+      Escreval(" ")
+      SE (xnum MOD 2) = 0 ENTAO
+         Escreval("O número é PAR ! ")
+      SENAO
+         Escreval("O número é IMPAR ")
+      FIMSE
+
+      Escreval(" ")
+      Escreval(" ")
+      Escreval(" ")
+
+      Escreva("Continua <S/N> ? ")
+      Leia(xTecla)
+
+      SE (xTecla = "N") ou (xTecla = "n") ENTAO
+         Flag := FALSO
+      SENAO
+         Flag := Verdadeiro
+      FIMSE
+   FIMENQUANTO
+
+fimalgoritmo
