@@ -1,0 +1,291 @@
+Falha de segmentação
+
+link: https://vinipsmaker.wordpress.com/2013/12/20/meu-erro-favorito-de-cc-falha-de-segmentacao/
+
+O quê?
+
+O erro falha de segmentação acontece, principalmente, quando você desreferencia um ponteiro inválido. Quando uma falha de segmentação acontece, o programa é encerrado imediatamente.
+Por quê?
+
+Esse é o meu erro favorito, pois quando esse é o erro com o qual você se depara, provavelmente não irá gastar muito tempo com o mesmo.
+
+Tudo que você precisa para identificar exatamente esse erro é (1) identificar o conjunto de ações que ocasionará a falha de segmentação, (2) executar o programa através de um depurador e (3) fazer o backtrace, que lhe dará toda a corrente de chamadas de funções que provocou a falha de segmentação, apontando exatamente para a linha de código que ocasionou o problema, além de outras informações úteis como o valor de cada variável.
+
+
+O contra-ataque!
+
+    (essa seção foi adicionada a pedido dos leitores, 2 dias após o artigo ser publicado)
+
+Eu criei o seguinte código-fonte que apresenta um erro. De acordo com o padrão de C++ o seu comportamento é indefinido e o compilador tem a liberdade de fazer elefantes rosas aparecerem na tela do seu computador sem perder o título de “compilador de C++”. Entretanto, o que provavelmente irá ocorrer é uma falha de segmentação. Baixe o código-fonte e siga para a próxima etapa, onde irei mostrar como erros desse tipo podem ser descobertos de forma simples.
+
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+struct Compra
+{
+    float preco;
+    Compra *proxima;
+};
+
+struct Cliente
+{
+    string nome;
+    Compra *compras;
+};
+
+vector<Cliente> clientes;
+
+void menu()
+{
+    cout << "Opções:\n"
+        " 1 - Ler clientes\n"
+        " 2 - Cadastrar cliente\n"
+        " 3 - Detalhar cliente\n"
+        " Q - Sair" << endl;
+}
+
+void ler_clientes()
+{
+    if ( !clientes.size() ) {
+        cout << "Nenhum cliente cadastrado" << endl;
+        return;
+    }
+
+    cout << "Clientes:" << endl;
+    for ( vector<Cliente>::iterator it = clientes.begin(), end = clientes.end()
+              ; it != end ; ++it ) {
+        cout << "  Nome: " << it->nome << endl;
+        if ( it->compras )
+            cout << "  Primeira compra: " << it->compras->preco  << endl;
+        cout << " --" << endl;
+    }
+}
+
+void cadastrar_cliente()
+{
+    cout << "Digite o nome do cliente:" << endl;
+    Cliente cliente;
+    cin >> cliente.nome;
+    clientes.push_back(cliente);
+    cout << "Cliente \"" << cliente.nome << "\" inserido com sucesso" << endl;
+}
+
+void detalhar_cliente()
+{
+    cout << "detalhar_cliente()" << endl;
+}
+
+int main()
+{
+    menu();
+    char opcao;
+    while ( cin >> opcao ) {
+        switch ( opcao ) {
+        case '1':
+            ler_clientes();
+            break;
+        case '2':
+            cadastrar_cliente();
+            break;
+        case '3':
+            detalhar_cliente();
+            break;
+        case 'q':
+        case 'Q':
+            return 0;
+break;
+        }
+        menu();
+   }
+
+}
+
+
+
+    EDIT(2014/02/23): Eu sempre achei que o texto abaixo seria confuso, pois não representava precisamente como uma sessão do gdb realmente é, então, devido (1) a isso e (2) a descoberta do asciinema, resolvi adicionar mais esse pequeno texto no artigo. Basicamente, recomendo que você veja esse asciicast no asciinema antes de prosseguir para os detalhes.
+
+O primeiro passo é compilar o programa junto com as informações de depuração. Leia o manual do seu compilador para descobrir como fazer isso. Caso utilize uma IDE ou qualquer outro intermediário para compilar o programa, provavelmente isso pode ser feito escolhendo um perfil de debug. No gcc, a opção que habilita os símbolos de depuração é a opção “-g”:
+
+
+g++ -g clientes.cpp
+view raw
+script.sh hosted with ❤ by GitHub
+
+
+
+Após isso você pode executar o programa através de um depurador e ficar brincando com o programa até o erro acontecer. Aqui, utilizo o gdb, sem nenhuma interface:
+
+gdb a.out
+view raw
+script2.sh hosted with ❤ by GitHub
+
+Após o gdb iniciado, você presenciará sua saída padrão, que é algo parecido com o texto a seguir:
+
+GNU gdb (GDB) 7.6.2
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "i686-pc-linux-gnu".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from /home/vinipsmaker/a.out...(no debugging symbols found)...done.
+(gdb) 
+view raw
+gdb.txt hosted with ❤ by GitHub
+
+
+
+Dentro da interface do gdb, execute o comando “run” e brinque com o programa até o erro acontecer. No meu caso a saída foi essa:
+
+(gdb) run
+Starting program: /home/vinipsmaker/a.out 
+warning: Could not load shared library symbols for linux-gate.so.1.
+Do you need "set solib-search-path" or "set sysroot"?
+Opções:
+ 1 - Ler clientes
+ 2 - Cadastrar cliente
+ 3 - Detalhar cliente
+ Q - Sair
+1
+Nenhum cliente cadastrado
+Opções:
+ 1 - Ler clientes
+ 2 - Cadastrar cliente
+ 3 - Detalhar cliente
+ Q - Sair
+2
+Digite o nome do cliente:
+Chuck
+Cliente "Chuck" inserido com sucesso
+Opções:
+ 1 - Ler clientes
+ 2 - Cadastrar cliente
+ 3 - Detalhar cliente
+ Q - Sair
+1
+Clientes:
+  Nome: Chuck
+
+Program received signal SIGSEGV, Segmentation fault.
+0x08048d35 in ler_clientes () at test.cpp:42
+42	            cout << "  Primeira compra: " << it->compras->preco  << endl;
+(gdb) 
+view raw
+gdb2.txt hosted with ❤ by GitHub
+
+
+
+Voltando a interface do gdb, após o programa ter “crashado”, os dois principais comandos para navegar na pilha de execução são “backtrace” e “frame”, que, respectivamente, mostram a pilha de execução e escolhem um frame/instante na pilha/linha-de-execução.
+
+(gdb) backtrace
+#0  0x08048d35 in ler_clientes() ()
+#1  0x08048ef5 in main ()
+(gdb) frame 0
+#0  0x08048d35 in ler_clientes() ()
+(gdb) list
+37	    cout << "Clientes:" << endl;
+38	    for ( vector<Cliente>::iterator it = clientes.begin(), end = clientes.end()
+39	              ; it != end ; ++it ) {
+40	        cout << "  Nome: " << it->nome << endl;
+41	        if ( it->compras )
+42	            cout << "  Primeira compra: " << it->compras->preco  << endl;
+43	        cout << " --" << endl;
+44	    }
+45	}
+46	
+(gdb) 
+view raw
+gdb3.txt hosted with ❤ by GitHub
+
+
+E assim descobrimos, usando o gdb, que o programa travou exatamente na linha 42, após a função ler_clientes ter sido chamada pela função main. Podemos usar o comando “print” para imprimir o valor de variáveis/expressões que sejam válidas no contexto.
+
+(gdb) print it->compras
+$1 = (Compra *) 0x1f2e4b0
+(gdb) print it->compras->preco
+Cannot access memory at address 0x1f2e4b0
+(gdb) 
+view raw
+gdb4.txt hosted with ❤ by GitHub
+
+
+
+
+E assim descobrimos que há um ponteiro inválido na memória e o programa “crashou” quando tentamos acessá-lo. As duas opções a partir de agora são (1) examinar o código e descobrir que código inseriu um ponteiro inválido em memória ou (2) continuar usando o auxílio do gdb para descobrir a fonte do erro. Como o código é muito simples, é fácil ver que eu “esqueci” de inicializar o ponteiro dos objetos que são inseridos na variável “clientes” (isso, é claro, só é fácil depois que já descobrimos qual é o erro com a ajuda do gdb).
+
+Caso você queira continuar a usar a ajuda do gdb para inspecionar o estado do programa em tempo de execução, os próximos comandos que seriam lhe úteis seriam “watch”, “break”, “step” e “continue”.
+
+Para referência, deixo abaixo o resto de minha sessão do gdb, onde continuo examinando o programa até descobrir que código faz a inserção de um ponteiro inválido. E recomendo que você já tenha executado o gdb nesse momento, ou então irá ver esse monte de texto e não vai entender nada, achando que é algo muito difícil…
+
+(gdb) watch clientes
+Hardware watchpoint 1: clientes
+(gdb) run
+The program being debugged has been started already.
+Start it from the beginning? (y or n) y
+Starting program: /home/vinipsmaker/a.out 
+warning: Could not load shared library symbols for linux-gate.so.1.
+Do you need "set solib-search-path" or "set sysroot"?
+Opções:
+ 1 - Ler clientes
+ 2 - Cadastrar cliente
+ 3 - Detalhar cliente
+ Q - Sair
+2
+Digite o nome do cliente:
+Chuck
+Hardware watchpoint 1: clientes
+
+Old value = std::vector of length 0, capacity 0
+New value = 
+    std::vector of length -16816139, capacity -16816139 = {{nome = "Chuck", compras = 0xb7f2e4b0 <std::basic_ios<char, std::char_traits<char> >::operator void*() const>}, {nome = <error reading variable: Cannot access memory at address 0xfffffff4>, compras = 0x20fa1}, {nome = <error reading variable: Cannot access memory at address 0xfffffff4>, compras = 0x0}, {nome = <error reading variable: Cannot access memory at address 0xfffffff4>, compras = 0x0}, {nome = <error reading variable: Cannot access memory at address 0xfffffff4>, compras = 0x0}, {nome = <error reading variable: Cannot access memory at address 0xfffffff4>, compras = 0x0}, {nome = <error reading variable: Cannot access memory at address 0xfffffff4>, compras = 0x0}, {nome = <error reading variable: Cannot access memory at address 0xfffffff4>, compras = 0x0}, {nome = <error reading variable: Cannot access memory at address 0xfffffff4>, compras = 0x0}, {nome = <error reading variable: Cannot access memory at address 0xfffffff4>, compras = 0x0}, {nome = <error reading variable: Cannot access memory at address 0xfffffff4>, compras = 0x0}, {nome = <error reading variable: Cannot access memory at address 0xfffffff4>, compras = 0x0}, {nome = <error reading variable: Cannot access memory at address 0xfffffff4>, compras = 0x0}, {nome = <error reading variable: Cannot access memory at address 0xfffffff4>, compras = 0x0}, {nome = <error reading variable: Cannot access memory at address 0xfffffff4>, compras = 0x0}, {nome = <error reading variable: Cannot access memory at address 0xfffffff4>, compras = 0x0}, {nome = <error reading variable: Cannot access memory at address 0xfffffff4>, compras = 0x0}, {nome = <error reading variable: Cannot access memory at address 0xfffffff4>, compras = 0x0}, {nome = <error reading variable: Cannot access memory at address 0xfffffff4>, compras = 0x0}, {nome = <error reading variable: Cannot access memory at address 0xfffffff4>, compr---Type <return> to continue, or q <return> to quit---q
+Quit
+(gdb) list
+385				_M_get_Tp_allocator());
+386		  _M_deallocate(this->_M_impl._M_start,
+387				this->_M_impl._M_end_of_storage
+388				- this->_M_impl._M_start);
+389		  this->_M_impl._M_start = __new_start;
+390		  this->_M_impl._M_finish = __new_finish;
+391		  this->_M_impl._M_end_of_storage = __new_start + __len;
+392		}
+393	    }
+394	
+(gdb) backtrace
+#0  std::vector<Cliente, std::allocator<Cliente> >::_M_insert_aux (this=0x804bbf0 <clientes>, 
+    __position=<error reading variable: Cannot access memory at address 0x0>, __x=...) at /usr/include/c++/4.8.2/bits/vector.tcc:390
+#1  0x08049135 in std::vector<Cliente, std::allocator<Cliente> >::push_back (this=0x804bbf0 <clientes>, __x=...)
+    at /usr/include/c++/4.8.2/bits/stl_vector.h:913
+#2  0x08048e1b in cadastrar_cliente () at test.cpp:52
+#3  0x08048efc in main () at test.cpp:71
+(gdb) frame 2
+#2  0x08048e1b in cadastrar_cliente () at test.cpp:52
+52	    clientes.push_back(cliente);
+(gdb) list
+47	void cadastrar_cliente()
+48	{
+49	    cout << "Digite o nome do cliente:" << endl;
+50	    Cliente cliente;
+51	    cin >> cliente.nome;
+52	    clientes.push_back(cliente);
+53	    cout << "Cliente \"" << cliente.nome << "\" inserido com sucesso" << endl;
+54	}
+55	
+56	void detalhar_cliente()
+(gdb) print cliente
+$2 = {nome = "Chuck", compras = 0xb7f2e4b0 <std::basic_ios<char, std::char_traits<char> >::operator void*() const>}
+(gdb) 
+view raw
+gdb5.txt hosted with ❤ by GitHub
+
+Algo que quero destacar é que o código-fonte é de “um programa em desenvolvimento” e, consequentemente, bem curto. Mas reflita sobre o que aconteceria se ele fosse grande (4000 linhas ou algo parecido). Usando o gdb, o processo de encontrar o erro seria o mesmo, bem fácil.
+Sobre estes anúncios
+Share this:
+
+   
+
+
