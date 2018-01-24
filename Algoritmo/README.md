@@ -26,7 +26,7 @@ Aqui está a lista de perguntas e respostas sobre a programação C com mais de 
 
 1. Perguntas sobre Tipos de Dados, Operadores e Expressões em C
 
-- [Nomes variáveis - 1]()
+- [Nomes variáveis - 1](C_Question_and_Answers/Variable_Names_1.md)
 - [Tipos e tamanhos de dados - 1]()
 - [Constantes - 1]()
 - [Declarações - 1]()
