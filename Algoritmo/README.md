@@ -1,3 +1,3 @@
-                                        EXERCICIOS DE LÓGICA DE PROGRAMAÇÃO
+# EXERCICIOS DE LÓGICA DE PROGRAMAÇÃO
 
-                                          CURSO : SISTEMAS PARA INTERNET 
+## CURSO : SISTEMAS PARA INTERNET 
