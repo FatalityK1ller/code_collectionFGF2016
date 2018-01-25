@@ -24,6 +24,7 @@ Aqui está uma lista de perguntas da entrevista sobre a Linguagem C abordando o 
 </details>
 
 
+
 **2. C99 standard garantia de unicidade de _____ caracteres para nomes externos.**
 
 - a) 31
