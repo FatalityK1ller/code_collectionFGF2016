@@ -23,7 +23,7 @@ Aqui está uma lista de perguntas da entrevista sobre a Linguagem C abordando o 
     Explicação: o compilador do ISO C99 pode considerar apenas os primeiros 63 caracteres para o interno.
 </details>
 
-
+---
 
 **2. C99 standard garantia de unicidade de _____ caracteres para nomes externos.**
 
@@ -43,6 +43,8 @@ Aqui está uma lista de perguntas da entrevista sobre a Linguagem C abordando o 
  
 </details>
 
+---
+
 **3. Qual dos seguintes não é uma declaração de nome de variável válida?**
 
 - a) int __a3;
@@ -59,6 +61,8 @@ Aqui está uma lista de perguntas da entrevista sobre a Linguagem C abordando o 
 
  
 </details>
+
+---
 
 **4. Qual dos seguintes não é uma declaração de nome de variável válida?**
 
@@ -77,6 +81,8 @@ Aqui está uma lista de perguntas da entrevista sobre a Linguagem C abordando o 
  
 </details>
 
+---
+
 **5. Os nomes de variáveis que começam com o sublinhado não são encorajados. Por que?**
 
 - a) Não está padronizado
@@ -93,6 +99,8 @@ Aqui está uma lista de perguntas da entrevista sobre a Linguagem C abordando o 
 
  
 </details>
+
+---
 
 **6. Todas as palavras-chave em C estão em**
 
@@ -111,6 +119,8 @@ Aqui está uma lista de perguntas da entrevista sobre a Linguagem C abordando o 
  
 </details>
 
+---
+
 **7. Resolução de nome de variável (número de caracteres significativos para singularidade de variável) depende de**
 
 - a) Implementações de compilador e linker
@@ -127,6 +137,8 @@ Aqui está uma lista de perguntas da entrevista sobre a Linguagem C abordando o 
 
  
 </details>
+
+---
 
 **8. Qual dos seguintes não é um nome de variável C válido?**
 
@@ -145,6 +157,8 @@ Aqui está uma lista de perguntas da entrevista sobre a Linguagem C abordando o 
  
 </details>
 
+---
+
 **9. Qual dos seguintes itens é verdadeiro para nomes de variáveis em C?**
 
 - a) Eles podem conter caracteres alfanuméricos, bem como caracteres especiais
@@ -161,6 +175,8 @@ Aqui está uma lista de perguntas da entrevista sobre a Linguagem C abordando o 
 
  
 </details>
+
+---
 
 ### Sanfoundry Global Education & Learning Series - C Linguagem de programação.
 
