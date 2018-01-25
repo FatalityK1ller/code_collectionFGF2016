@@ -1,5 +1,7 @@
 # C Perguntas e Respostas de Programação 
 
+![](https://i.pinimg.com/236x/d6/7e/6e/d67e6ef74c9cba51d157c719e7494fae--programming-languages-logos.jpg)
+
 ## Nomes de variáveis - 1
 
 Esta seção sobre perguntas e respostas da entrevista da linguagem C concentra-se em "Nomes de variáveis". Um estudante deve praticar essas perguntas de entrevista para melhorar suas habilidades de programação C necessárias para várias entrevistas (entrevistas no campus, entrevistas de walkin, entrevistas de empresa), colocações, exames de admissão e outros exames competitivos. Essas questões podem ser tentadas por qualquer pessoa focada em aprender linguagem de programação C. Eles podem ser iniciantes, inermédiarios, graduados em engenharia ou profissionais de TI experientes. As nossas perguntas da entrevista C traz explicação detalhada das respostas que ajudam na melhor compreensão dos conceitos C.
